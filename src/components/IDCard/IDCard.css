@@ -1,0 +1,1167 @@
+/* =========================================================
+   ID CARD ASSEMBLY
+========================================================= */
+
+.id-card-wrapper {
+  position: absolute;
+
+  top: 0;
+
+  z-index: 12;
+
+  width: 250px;
+
+  opacity: 0;
+
+  transform-origin: top center;
+
+  will-change: transform;
+
+  overflow: visible;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LEFT / RIGHT BASE POSITION
+========================================================= */
+
+.id-card-wrapper.left {
+  left: calc(50% - 650px);
+}
+
+.id-card-wrapper.right {
+  right: calc(50% - 650px);
+}
+
+
+/* =========================================================
+   CARD POSITIONS
+   3 CARDS EACH SIDE
+========================================================= */
+
+/*
+   LEFT:
+
+   position 1 = outer
+   position 2 = middle
+   position 3 = inner
+
+   RIGHT:
+
+   position 1 = outer
+   position 2 = middle
+   position 3 = inner
+*/
+
+
+.id-card-wrapper.left.position-1 {
+  transform: translateX(0);
+}
+
+.id-card-wrapper.left.position-2 {
+  transform: translateX(115px);
+}
+
+.id-card-wrapper.left.position-3 {
+  transform: translateX(230px);
+}
+
+
+.id-card-wrapper.right.position-1 {
+  transform: translateX(0);
+}
+
+.id-card-wrapper.right.position-2 {
+  transform: translateX(-115px);
+}
+
+.id-card-wrapper.right.position-3 {
+  transform: translateX(-230px);
+}
+
+
+/* =========================================================
+   LANYARD
+========================================================= */
+
+.lanyard {
+  position: absolute;
+
+  top: -35px;
+  left: 50%;
+
+  width: 34px;
+  height: 245px;
+
+  transform: translateX(-50%);
+
+  transform-origin: top center;
+
+  z-index: 1;
+
+  overflow: visible;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SINGLE STRAP
+========================================================= */
+
+.lanyard-strap {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 26px;
+  height: 215px;
+
+  transform: translateX(-50%);
+
+  border-radius: 2px 2px 8px 8px;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.035) 0px,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(
+      90deg,
+      #15181c 0%,
+      #292f35 25%,
+      #3d444b 50%,
+      #292f35 75%,
+      #15181c 100%
+    );
+
+  box-shadow:
+    inset 1px 0 rgba(255, 255, 255, 0.13),
+    inset -1px 0 rgba(0, 0, 0, 0.35),
+    0 5px 12px rgba(0, 0, 0, 0.2);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   STRAP WEAVE
+========================================================= */
+
+.strap-weave {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.08) 0px,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   STRAP HIGHLIGHT
+========================================================= */
+
+.strap-highlight {
+  position: absolute;
+
+  left: 3px;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.24),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+
+/* =========================================================
+   STRAP SHADOW
+========================================================= */
+
+.strap-shadow {
+  position: absolute;
+
+  right: 3px;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.08)
+  );
+}
+
+
+/* =========================================================
+   STRAP FOLD
+========================================================= */
+
+.strap-fold {
+  position: absolute;
+
+  left: 50%;
+  top: 199px;
+
+  width: 32px;
+  height: 28px;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1a1d21 0%,
+      #343a40 50%,
+      #1a1d21 100%
+    );
+
+  border-radius: 2px;
+
+  box-shadow:
+    inset 1px 0 rgba(255, 255, 255, 0.1),
+    inset -1px 0 rgba(0, 0, 0, 0.35),
+    0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   STITCHING
+========================================================= */
+
+.strap-fold span {
+  position: absolute;
+
+  left: 3px;
+  right: 3px;
+
+  height: 1px;
+
+  background: rgba(180, 180, 180, 0.32);
+
+  box-shadow:
+    0 1px rgba(0, 0, 0, 0.35);
+}
+
+.strap-fold span:nth-child(1) {
+  top: 7px;
+}
+
+.strap-fold span:nth-child(2) {
+  top: 12px;
+}
+
+.strap-fold span:nth-child(3) {
+  top: 17px;
+}
+
+
+/* =========================================================
+   METAL RING
+========================================================= */
+
+.lanyard-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 218px;
+
+  width: 27px;
+  height: 27px;
+
+  transform: translateX(-50%);
+
+  z-index: 6;
+
+  border-radius: 50%;
+
+  border: 4px solid #74777a;
+
+  background: transparent;
+
+  box-shadow:
+    inset 1px 1px 1px rgba(255, 255, 255, 0.7),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.lanyard-ring::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -2px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ID CARD
+========================================================= */
+
+.id-card {
+  position: relative;
+
+  box-sizing: border-box;
+
+  width: 250px;
+  height: 400px;
+
+  margin-top: 228px;
+
+  padding: 7px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.72) 0%,
+      rgba(245, 247, 246, 0.56) 45%,
+      rgba(232, 235, 233, 0.58) 100%
+    );
+
+  border: 2px solid rgba(255, 255, 255, 0.92);
+
+  box-shadow:
+
+    0 38px 65px rgba(35, 35, 32, 0.2),
+
+    0 16px 28px rgba(35, 35, 32, 0.14),
+
+    0 5px 10px rgba(25, 25, 23, 0.1),
+
+    inset 0 0 0 2px rgba(255, 255, 255, 0.72),
+
+    inset 0 3px 0 rgba(255, 255, 255, 0.98),
+
+    inset 3px 0 0 rgba(255, 255, 255, 0.72),
+
+    inset -3px 0 0 rgba(115, 120, 118, 0.1),
+
+    inset 0 -3px 0 rgba(110, 115, 113, 0.13),
+
+    inset 0 0 20px rgba(255, 255, 255, 0.55);
+
+  backdrop-filter: blur(14px) saturate(105%);
+
+  -webkit-backdrop-filter: blur(14px) saturate(105%);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   GLASS LIGHT
+========================================================= */
+
+.id-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 2px;
+
+  z-index: 50;
+
+  border-radius: 15px;
+
+  border: 2px solid rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.98),
+    inset 2px 0 0 rgba(255, 255, 255, 0.72),
+    inset -2px 0 0 rgba(80, 84, 82, 0.1),
+    inset 0 -2px 0 rgba(80, 84, 82, 0.14);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INNER GLASS LINE
+========================================================= */
+
+.id-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  z-index: 51;
+
+  border-radius: 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.72);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 1px 0 0 rgba(255, 255, 255, 0.48),
+    inset -1px 0 0 rgba(110, 115, 113, 0.06),
+    inset 0 -1px 0 rgba(110, 115, 113, 0.08);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD INNER
+========================================================= */
+
+.card-inner {
+  position: relative;
+
+  z-index: 10;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 12px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.62) 0%,
+      rgba(255, 255, 255, 0.38) 50%,
+      rgba(245, 247, 246, 0.48) 100%
+    );
+
+  backdrop-filter: blur(8px) saturate(105%);
+
+  -webkit-backdrop-filter: blur(8px) saturate(105%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.card-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  height: 25px;
+
+  color: #22211f;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.1px;
+}
+
+
+.brand-mark {
+  width: 15px;
+  height: 15px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  background: rgba(25, 25, 24, 0.92);
+
+  font-size: 9px;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   PORTFOLIO IMAGE
+========================================================= */
+
+.id-photo {
+  position: relative;
+
+  width: 100%;
+  height: 240px;
+
+  margin-top: 5px;
+
+  overflow: hidden;
+
+  border-radius: 7px;
+
+  background: rgba(215, 212, 204, 0.42);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.52),
+    0 2px 7px rgba(0, 0, 0, 0.06);
+}
+
+
+.id-photo::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.14),
+      transparent 45%,
+      rgba(255, 255, 255, 0.04)
+    );
+}
+
+
+.id-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter:
+    saturate(0.94)
+    contrast(0.98);
+
+  transform: scale(1.01);
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.id-info {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 8px;
+
+  margin-top: 10px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   SERVICE INFO
+========================================================= */
+
+.service-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+/* =========================================================
+   LEFT CARDS
+========================================================= */
+
+.id-card-wrapper.left .service-info {
+  text-align: left;
+}
+
+.id-card-wrapper.left .id-info h1 {
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   RIGHT CARDS
+   IMPORTANT:
+   Right cards overlap from the LEFT, so move the
+   service text toward the RIGHT side of the card.
+========================================================= */
+
+.id-card-wrapper.right .service-info {
+  text-align: right;
+
+  margin-left: auto;
+}
+
+.id-card-wrapper.right .id-info h1 {
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   SERVICE LABEL
+========================================================= */
+
+.service-label {
+  display: block;
+
+  color: #8a867f;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
+
+.id-info h1 {
+  margin: 3px 0 0;
+
+  max-width: 175px;
+
+  color: #181715;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.2px;
+
+  word-break: normal;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.id-number {
+  flex-shrink: 0;
+
+  color: #77736c;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.id-card-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: auto;
+
+  padding-top: 10px;
+}
+
+
+/* =========================================================
+   BARCODE
+========================================================= */
+
+.barcode {
+  width: 100%;
+  height: 24px;
+
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+
+  gap: 2px;
+
+  overflow: hidden;
+}
+
+
+.barcode i {
+  display: block;
+
+  width: 2px;
+  height: 100%;
+
+  background: #111;
+
+  flex: 0 0 auto;
+}
+
+
+.barcode i:nth-child(1) {
+  width: 2px;
+}
+
+.barcode i:nth-child(2) {
+  width: 4px;
+}
+
+.barcode i:nth-child(3) {
+  width: 1px;
+}
+
+.barcode i:nth-child(4) {
+  width: 3px;
+}
+
+.barcode i:nth-child(5) {
+  width: 2px;
+}
+
+.barcode i:nth-child(6) {
+  width: 5px;
+}
+
+.barcode i:nth-child(7) {
+  width: 1px;
+}
+
+.barcode i:nth-child(8) {
+  width: 2px;
+}
+
+.barcode i:nth-child(9) {
+  width: 4px;
+}
+
+.barcode i:nth-child(10) {
+  width: 1px;
+}
+
+.barcode i:nth-child(11) {
+  width: 3px;
+}
+
+.barcode i:nth-child(12) {
+  width: 2px;
+}
+
+.barcode i:nth-child(13) {
+  width: 5px;
+}
+
+.barcode i:nth-child(14) {
+  width: 1px;
+}
+
+.barcode i:nth-child(15) {
+  width: 3px;
+}
+
+.barcode i:nth-child(16) {
+  width: 2px;
+}
+
+.barcode i:nth-child(17) {
+  width: 4px;
+}
+
+.barcode i:nth-child(18) {
+  width: 2px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+  .id-card-wrapper.left {
+    left: calc(50% - 720px);
+  }
+
+  .id-card-wrapper.right {
+    right: calc(50% - 720px);
+  }
+
+  .id-card-wrapper.left.position-2 {
+    transform: translateX(125px);
+  }
+
+  .id-card-wrapper.left.position-3 {
+    transform: translateX(250px);
+  }
+
+  .id-card-wrapper.right.position-2 {
+    transform: translateX(-125px);
+  }
+
+  .id-card-wrapper.right.position-3 {
+    transform: translateX(-250px);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+  .id-card-wrapper {
+    width: 200px;
+  }
+
+  .id-card-wrapper.left {
+    left: calc(50% - 485px);
+  }
+
+  .id-card-wrapper.right {
+    right: calc(50% - 485px);
+  }
+
+  .id-card-wrapper.left.position-2 {
+    transform: translateX(85px);
+  }
+
+  .id-card-wrapper.left.position-3 {
+    transform: translateX(170px);
+  }
+
+  .id-card-wrapper.right.position-2 {
+    transform: translateX(-85px);
+  }
+
+  .id-card-wrapper.right.position-3 {
+    transform: translateX(-170px);
+  }
+
+  .id-card {
+    width: 200px;
+    height: 280px;
+
+    margin-top: 195px;
+
+    padding: 6px;
+  }
+
+  .card-inner {
+    padding: 9px;
+  }
+
+  .id-photo {
+    height: 150px;
+  }
+
+  .service-label {
+    font-size: 6px;
+  }
+
+  .id-info h1 {
+    font-size: 10px;
+
+    max-width: 140px;
+  }
+
+  .id-number {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+  .id-card-wrapper {
+    width: 135px;
+  }
+
+  .id-card-wrapper.left {
+    left: 1%;
+  }
+
+  .id-card-wrapper.right {
+    right: 1%;
+  }
+
+  /*
+   * On mobile the cards overlap more.
+   */
+
+  .id-card-wrapper.left.position-2 {
+    transform: translateX(65px);
+  }
+
+  .id-card-wrapper.left.position-3 {
+    transform: translateX(130px);
+  }
+
+  .id-card-wrapper.right.position-2 {
+    transform: translateX(-65px);
+  }
+
+  .id-card-wrapper.right.position-3 {
+    transform: translateX(-130px);
+  }
+
+
+  /* LANYARD */
+
+  .lanyard {
+    width: 28px;
+    height: 155px;
+
+    transform:
+      translateX(-50%)
+      scale(0.7);
+
+    transform-origin: top center;
+  }
+
+
+  /* CARD */
+
+  .id-card {
+    width: 135px;
+    height: 190px;
+
+    margin-top: 145px;
+
+    padding: 4px;
+
+    border-radius: 10px;
+
+    border-width: 1.5px;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.68) 0%,
+        rgba(233, 239, 239, 0.54) 35%,
+        rgba(233, 239, 239, 0.42) 65%,
+        rgba(255, 255, 255, 0.58) 100%
+      );
+
+    backdrop-filter: blur(14px) saturate(120%);
+
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+
+    box-shadow:
+      0 25px 40px rgba(30, 29, 26, 0.2),
+      0 10px 18px rgba(30, 29, 26, 0.14),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+      inset 0 2px 0 rgba(255, 255, 255, 0.92),
+      inset 2px 0 0 rgba(255, 255, 255, 0.55),
+      inset -2px 0 0 rgba(80, 90, 90, 0.08),
+      inset 0 -2px 0 rgba(80, 90, 90, 0.12),
+      inset 0 0 15px rgba(255, 255, 255, 0.28);
+  }
+
+
+  .id-card::before {
+    inset: 2px;
+
+    border-radius: 8px;
+
+    border-width: 2px;
+  }
+
+
+  .id-card::after {
+    inset: 5px;
+
+    border-radius: 7px;
+  }
+
+
+  .card-inner {
+    padding: 7px;
+
+    border-radius: 7px;
+  }
+
+
+  /* BRAND */
+
+  .card-brand {
+    height: 16px;
+
+    font-size: 6px;
+  }
+
+
+  .brand-mark {
+    width: 9px;
+    height: 9px;
+
+    font-size: 5px;
+  }
+
+
+  /* PHOTO */
+
+  .id-photo {
+    height: 103px;
+
+    border-radius: 5px;
+  }
+
+
+  /* =========================================================
+   INFORMATION - MOBILE
+========================================================= */
+
+.id-info {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-top: 5px;
+
+  gap: 4px;
+
+  width: 100%;
+}
+
+
+/* LEFT */
+
+.id-card-wrapper.left .service-info {
+  text-align: left;
+}
+
+
+/* RIGHT */
+
+.id-card-wrapper.right .service-info {
+  text-align: right;
+
+  margin-left: auto;
+}
+
+
+/* LABEL */
+
+.service-label {
+  font-size: 4px;
+
+  letter-spacing: 0.7px;
+}
+
+
+/* TITLE */
+
+.id-info h1 {
+  margin-top: 2px;
+
+  max-width: 90px;
+
+  font-size: 6px;
+
+  line-height: 1.15;
+
+  word-break: normal;
+
+  overflow-wrap: break-word;
+}
+
+
+/* NUMBER */
+
+.id-number {
+  font-size: 4px;
+}
+
+
+  /* BARCODE */
+
+  .id-card-footer {
+    padding-top: 5px;
+  }
+
+
+  .barcode {
+    height: 10px;
+
+    gap: 1px;
+  }
+
+
+  .barcode i {
+    width: 1px;
+  }
+}
+
+
+/* =========================================================
+   FALLBACK
+========================================================= */
+
+@supports not (backdrop-filter: blur(10px)) {
+  .id-card {
+    background: rgba(233, 239, 239, 0.92);
+  }
+
+  .card-inner {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}

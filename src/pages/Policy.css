@@ -1,0 +1,199 @@
+.policy-page {
+  min-height: 100vh;
+  background: #f8f8f5;
+  color: #171918;
+}
+
+
+/* =================================
+   MAIN
+================================= */
+
+.policy-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 180px 5% 120px;
+}
+
+
+/* =================================
+   SECTION LABEL
+================================= */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 70px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.section-number {
+  color: #43816d;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section-line {
+  width: 58px;
+  height: 2px;
+  background: #43816d;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.policy-header {
+  max-width: 900px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #dedfdb;
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+
+  color: #43816d;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.policy-header h1 {
+  margin: 0;
+
+  font-size: clamp(60px, 8vw, 110px);
+  line-height: 0.92;
+
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+.policy-header h1 span {
+  color: #43816d;
+}
+
+.policy-intro {
+  max-width: 700px;
+
+  margin-top: 40px;
+
+  color: #777c78;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.updated {
+  display: inline-block;
+
+  margin-top: 35px;
+
+  color: #9a9e9b;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.policy-content {
+  max-width: 1000px;
+  padding-top: 20px;
+}
+
+.policy-content section {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+
+  gap: 40px;
+
+  padding: 55px 0;
+
+  border-bottom: 1px solid #dedfdb;
+}
+
+.policy-number {
+  color: #43816d;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.policy-content h2 {
+  margin: 0 0 18px;
+
+  font-size: 30px;
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+}
+
+.policy-content p {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: #777c78;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .policy-container {
+    padding: 130px 20px 80px;
+  }
+
+  .section-label {
+    margin-bottom: 45px;
+  }
+
+  .policy-header {
+    padding-bottom: 55px;
+  }
+
+  .policy-header h1 {
+    font-size: clamp(48px, 14vw, 70px);
+  }
+
+  .policy-intro {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  .policy-content section {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 40px 0;
+  }
+
+  .policy-content h2 {
+    font-size: 25px;
+  }
+
+  .policy-content p {
+    font-size: 15px;
+  }
+
+}

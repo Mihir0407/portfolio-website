@@ -1,0 +1,1114 @@
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.services-section {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding:
+    clamp(100px, 10vh, 140px)
+    clamp(35px, 4vw, 75px)
+    clamp(50px, 6vh, 80px);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #fafaf8;
+
+  color: #111318;
+
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.services-inner {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(360px, 0.72fr)
+    minmax(700px, 1.28fr);
+
+  gap:
+    clamp(50px, 6vw, 100px);
+
+  width: 100%;
+
+  max-width: 1800px;
+
+  min-height: 720px;
+
+  margin: 0 auto;
+
+  align-items: center;
+
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.services-dots {
+
+  position: absolute;
+
+  width: 95px;
+
+  height: 95px;
+
+  pointer-events: none;
+
+  opacity: 0.65;
+
+  background-image:
+    radial-gradient(
+      #39725b 1.5px,
+      transparent 1.5px
+    );
+
+  background-size: 16px 16px;
+
+}
+
+
+.services-dots-top {
+
+  top: 25px;
+
+  right: 45px;
+
+}
+
+
+.services-dots-bottom {
+
+  bottom: 25px;
+
+  left: 25px;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.services-intro {
+
+  position: relative;
+
+  max-width: 540px;
+
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.services-label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom:
+    clamp(25px, 3vh, 35px);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+}
+
+
+.services-label-number {
+
+  color: #39725b;
+
+  font-size: 22px;
+
+}
+
+
+.services-label-line {
+
+  width: 48px;
+
+  height: 2px;
+
+  background: #39725b;
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.services-title {
+
+  margin: 0;
+
+  font-size:
+    clamp(55px, 5vw, 88px);
+
+  line-height: 0.96;
+
+  letter-spacing: -4.5px;
+
+  font-weight: 450;
+
+}
+
+
+.services-title span {
+
+  color: #39725b;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.services-description {
+
+  max-width: 500px;
+
+  margin:
+    32px
+    0
+    0;
+
+  color: #777d79;
+
+  font-size:
+    clamp(14px, 1.05vw, 17px);
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   AVAILABILITY
+========================================================= */
+
+.services-availability {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 45px;
+
+  padding:
+    11px 17px;
+
+  border:
+    1px solid #d7dad6;
+
+  border-radius: 30px;
+
+  color: #39725b;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+}
+
+
+.availability-dot {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #39725b;
+
+  box-shadow:
+    0 0 0 4px rgba(57,114,91,0.08);
+
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.services-signature {
+
+  margin-top: 48px;
+
+  max-width: 360px;
+
+}
+
+
+.services-signature > span {
+
+  display: block;
+
+  color: #8a8e8b;
+
+  font-size: 12px;
+
+}
+
+
+.services-signature strong {
+
+  display: block;
+
+  margin-top: 8px;
+
+  color: #39725b;
+
+  font-family: cursive;
+
+  font-size: 30px;
+
+  font-weight: 500;
+
+  transform: rotate(-3deg);
+
+}
+
+
+.signature-line {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 10px;
+
+}
+
+
+.signature-line > span {
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #cfd2ce;
+
+}
+
+
+.signature-barcode {
+
+  display: flex;
+
+  align-items: stretch;
+
+  height: 22px;
+
+  gap: 2px;
+
+}
+
+
+.signature-barcode i {
+
+  display: block;
+
+  width: 2px;
+
+  background: #151515;
+
+}
+
+
+.signature-barcode i:nth-child(2n) {
+
+  width: 1px;
+
+}
+
+
+.signature-barcode i:nth-child(4n) {
+
+  width: 3px;
+
+}
+
+
+/* =========================================================
+   SERVICE GRID
+========================================================= */
+
+.services-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+
+  perspective: 1000px;
+
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+
+  position: relative;
+
+  min-height: 300px;
+
+  padding:
+    27px 25px 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  border:
+    1px solid #e0e1dd;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 18px 50px
+    rgba(24, 35, 30, 0.06);
+
+  transform-style: preserve-3d;
+
+  cursor: default;
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+}
+
+
+.service-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 3px;
+
+  background: #39725b;
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    left center;
+
+  transition:
+    transform 0.45s ease;
+
+}
+
+
+.service-card:hover {
+
+  border-color: #c7d7cf;
+
+  box-shadow:
+    0 25px 65px
+    rgba(24, 35, 30, 0.11);
+
+}
+
+
+.service-card:hover::before {
+
+  transform: scaleX(1);
+
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.service-card-top {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+}
+
+
+.service-icon {
+
+  width: 58px;
+
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    #eef3f0;
+
+  color: #39725b;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+}
+
+
+.code-icon {
+
+  font-family:
+    monospace;
+
+  font-size: 18px;
+
+}
+
+
+.service-number {
+
+  color: #b2b7b3;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.service-card-content {
+
+  margin-top: 30px;
+
+}
+
+
+.service-card-content h3 {
+
+  margin: 0;
+
+  color: #151719;
+
+  font-size:
+    clamp(18px, 1.25vw, 23px);
+
+  line-height: 1.1;
+
+  letter-spacing: -0.6px;
+
+}
+
+
+.service-line {
+
+  width: 30px;
+
+  height: 2px;
+
+  margin-top: 17px;
+
+  background: #39725b;
+
+}
+
+
+.service-card-content p {
+
+  margin:
+    17px
+    0
+    0;
+
+  color: #777d79;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.service-card-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 25px;
+
+  padding-top: 13px;
+
+  border-top:
+    1px solid #eeeeeb;
+
+  color: #a0a5a1;
+
+  font-size: 9px;
+
+}
+
+
+.service-arrow {
+
+  color: #39725b;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+
+}
+
+
+.service-card:hover .service-arrow {
+
+  transform:
+    translate(4px, -4px);
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .services-section {
+
+    padding-left: 5vw;
+
+    padding-right: 5vw;
+
+  }
+
+
+  .services-inner {
+
+    grid-template-columns:
+      minmax(400px, 0.7fr)
+      minmax(850px, 1.3fr);
+
+    gap: 100px;
+
+  }
+
+
+  .service-card {
+
+    min-height: 315px;
+
+  }
+
+}
+
+
+/* =========================================================
+   HEIGHT OPTIMIZATION
+========================================================= */
+
+@media (min-width: 1000px) and (max-height: 850px) {
+
+  .services-section {
+
+    padding-top: 90px;
+
+    padding-bottom: 40px;
+
+  }
+
+
+  .services-inner {
+
+    min-height: 650px;
+
+    gap: 55px;
+
+  }
+
+
+  .services-title {
+
+    font-size:
+      clamp(50px, 4.7vw, 74px);
+
+  }
+
+
+  .services-description {
+
+    margin-top: 25px;
+
+  }
+
+
+  .services-availability {
+
+    margin-top: 30px;
+
+  }
+
+
+  .services-signature {
+
+    margin-top: 30px;
+
+  }
+
+
+  .service-card {
+
+    min-height: 275px;
+
+    padding: 22px;
+
+  }
+
+
+  .service-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .services-inner {
+
+    grid-template-columns:
+      300px 1fr;
+
+    gap: 40px;
+
+  }
+
+
+  .services-title {
+
+    font-size: 58px;
+
+    letter-spacing: -3px;
+
+  }
+
+
+  .services-grid {
+
+    gap: 16px;
+
+  }
+
+
+  .service-card {
+
+    min-height: 285px;
+
+    padding: 22px 20px;
+
+  }
+
+
+  .service-card-content h3 {
+
+    font-size: 18px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .services-section {
+
+    min-height: auto;
+
+    padding:
+      110px 35px 80px;
+
+  }
+
+
+  .services-inner {
+
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    gap: 55px;
+
+  }
+
+
+  .services-intro {
+
+    max-width: 700px;
+
+  }
+
+
+  .services-title {
+
+    font-size: 72px;
+
+  }
+
+
+  .services-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+
+  .service-card {
+
+    min-height: 280px;
+
+  }
+
+
+  .services-dots-bottom {
+
+    bottom: 20px;
+
+    left: 20px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .services-section {
+
+    padding:
+      95px 18px 60px;
+
+  }
+
+
+  .services-dots {
+
+    display: none;
+
+  }
+
+
+  .services-inner {
+
+    gap: 45px;
+
+  }
+
+
+  .services-label {
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    font-size: 10px;
+
+  }
+
+
+  .services-label-number {
+
+    font-size: 18px;
+
+  }
+
+
+  .services-label-line {
+
+    width: 30px;
+
+  }
+
+
+  .services-title {
+
+    font-size:
+      clamp(44px, 12vw, 60px);
+
+    line-height: 0.97;
+
+    letter-spacing: -3px;
+
+  }
+
+
+  .services-description {
+
+    max-width: 350px;
+
+    margin-top: 22px;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+
+  }
+
+
+  .services-availability {
+
+    margin-top: 30px;
+
+    padding:
+      10px 14px;
+
+    font-size: 9px;
+
+  }
+
+
+  .services-signature {
+
+    margin-top: 30px;
+
+  }
+
+
+  .services-signature > span {
+
+    font-size: 10px;
+
+  }
+
+
+  .services-signature strong {
+
+    font-size: 26px;
+
+  }
+
+
+  .services-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+  }
+
+
+  .service-card {
+
+    min-height: 245px;
+
+    padding:
+      21px 19px;
+
+    border-radius: 17px;
+
+  }
+
+
+  .service-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    font-size: 21px;
+
+  }
+
+
+  .service-card-content {
+
+    margin-top: 20px;
+
+  }
+
+
+  .service-card-content h3 {
+
+    font-size: 19px;
+
+  }
+
+
+  .service-card-content p {
+
+    max-width: 330px;
+
+    font-size: 11px;
+
+  }
+
+
+  .service-card-footer {
+
+    margin-top: 18px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .services-section {
+
+    padding:
+      90px 14px 50px;
+
+  }
+
+
+  .services-title {
+
+    font-size: 42px;
+
+    letter-spacing: -2.3px;
+
+  }
+
+
+  .service-card {
+
+    min-height: 230px;
+
+  }
+
+
+  .service-card-content h3 {
+
+    font-size: 17px;
+
+  }
+
+
+  .service-card-content p {
+
+    font-size: 10px;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+
+  *::before,
+
+  *::after {
+
+    scroll-behavior:
+      auto !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+  }
+
+}

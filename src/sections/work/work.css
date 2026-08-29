@@ -1,0 +1,1894 @@
+/* =========================================================
+   WORK SECTION
+========================================================= */
+
+.work-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding:
+    clamp(105px, 11vh, 145px)
+    clamp(35px, 4vw, 75px)
+    clamp(45px, 6vh, 75px);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #fafaf8;
+
+  color: #111318;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.work-dots {
+  position: absolute;
+
+  width: 95px;
+  height: 95px;
+
+  pointer-events: none;
+
+  opacity: 0.65;
+
+  background-image:
+    radial-gradient(
+      #39725b 1.5px,
+      transparent 1.5px
+    );
+
+  background-size: 16px 16px;
+}
+
+
+.work-dots-top {
+  top: 25px;
+  right: 45px;
+}
+
+
+.work-dots-bottom {
+  bottom: 25px;
+  left: 25px;
+}
+
+
+/* =========================================================
+   LANYARD
+========================================================= */
+
+.work-hanger {
+  position: absolute;
+
+  top: 0;
+
+  width: 55px;
+
+  /*
+   * IMPORTANT:
+   * This controls the total lanyard assembly.
+   * DO NOT increase this when increasing card height.
+   */
+
+  height: 415px;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+  transform-origin: top center;
+}
+
+
+/* LEFT */
+
+.hanger-left {
+  left: 50%;
+}
+
+
+/* RIGHT */
+
+.hanger-right {
+  right: 18%;
+}
+
+
+/* =========================================================
+   STRAP
+========================================================= */
+
+.hanger-strap {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 38px;
+
+  /*
+   * KEEP THIS SHORT.
+   * Card height is controlled separately.
+   */
+
+  height: 375px;
+
+  border-radius:
+    0 0 8px 8px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #151515 0px,
+      #151515 4px,
+      #282828 4px,
+      #282828 8px
+    );
+
+  box-shadow:
+    2px 4px 7px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   SINGLE LANYARD RING
+========================================================= */
+
+.hanger-ring {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 24px;
+
+  transform: translateX(-50%);
+
+  width: 28px;
+  height: 28px;
+
+  border:
+    4px solid #50514f;
+
+  border-radius: 50%;
+
+  background: #fafaf8;
+
+  box-sizing: border-box;
+
+  z-index: 8;
+}
+
+
+/*
+ * IMPORTANT:
+ *
+ * There is NO .card-hanging-point anymore.
+ *
+ * The ring above is the ONLY visible ring.
+ */
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.work-header {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  max-width: 1800px;
+
+  margin: 0 auto;
+}
+
+
+.work-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom:
+    clamp(20px, 2.5vh, 30px);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+
+.work-label-number {
+  color: #39725b;
+
+  font-size: 22px;
+}
+
+
+.work-label-line {
+  width: 48px;
+  height: 2px;
+
+  background: #39725b;
+}
+
+
+.work-header-content {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+
+.work-title {
+  margin: 0;
+
+  font-size:
+    clamp(55px, 5.4vw, 96px);
+
+  line-height: 0.94;
+
+  letter-spacing: -5px;
+
+  font-weight: 450;
+}
+
+
+.work-title span {
+  color: #39725b;
+}
+
+
+.work-subtitle {
+  margin:
+    clamp(22px, 3vh, 30px)
+    0
+    0;
+
+  max-width: 620px;
+
+  font-size:
+    clamp(14px, 1.1vw, 18px);
+
+  line-height: 1.5;
+
+  color: #707572;
+}
+
+
+.work-counter {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+
+  padding-right: 4%;
+
+  padding-bottom: 10px;
+
+  white-space: nowrap;
+}
+
+
+.counter-current {
+  color: #39725b;
+
+  font-size:
+    clamp(40px, 3.4vw, 60px);
+
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+
+.counter-divider {
+  font-size: 22px;
+
+  color: #777b78;
+}
+
+
+.counter-total {
+  font-size: 20px;
+
+  color: #222;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.work-layout {
+  position: relative;
+
+  z-index: 3;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(260px, 0.48fr)
+    minmax(700px, 1.52fr);
+
+  gap:
+    clamp(35px, 5vw, 90px);
+
+  width: 100%;
+
+  max-width: 1800px;
+
+  margin:
+    clamp(45px, 6vh, 70px)
+    auto
+    0;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.work-sidebar {
+  position: relative;
+
+  padding-top: 8px;
+
+  min-width: 0;
+}
+
+
+.project-list {
+  width: 100%;
+}
+
+
+.project-nav-item {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 70px;
+
+  padding:
+    12px
+    0;
+
+  display: grid;
+
+  grid-template-columns:
+    42px
+    1fr
+    25px;
+
+  align-items: center;
+
+  gap: 5px;
+
+  border: none;
+
+  border-bottom:
+    1px solid #dedfdb;
+
+  background: transparent;
+
+  color: #868b87;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    padding 0.3s ease;
+}
+
+
+.project-nav-item:first-child {
+  border-top:
+    1px solid #dedfdb;
+}
+
+
+.project-nav-item:hover {
+  color: #39725b;
+
+  padding-left: 6px;
+}
+
+
+.project-nav-item.active {
+  color: #39725b;
+
+  padding-left: 6px;
+}
+
+
+.nav-number {
+  font-size: 13px;
+
+  color: #858a87;
+}
+
+
+.active .nav-number {
+  color: #39725b;
+}
+
+
+.nav-project-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+
+.nav-project-info strong {
+  font-size: 14px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.nav-project-info small {
+  font-size: 10px;
+
+  color: #989c99;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.nav-arrow {
+  font-size: 15px;
+
+  opacity: 0;
+
+  transform:
+    translate(-5px, 5px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.project-nav-item:hover .nav-arrow,
+.project-nav-item.active .nav-arrow {
+  opacity: 1;
+
+  transform:
+    translate(0, 0);
+}
+
+
+/* =========================================================
+   PROJECT PROGRESS
+========================================================= */
+
+.project-progress {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 22px;
+
+  color: #858a87;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+
+.progress-track {
+  position: relative;
+
+  width: 3px;
+
+  height: 48px;
+
+  background: #dedfdb;
+
+  overflow: hidden;
+}
+
+
+.progress-fill {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  background: #39725b;
+
+  transition:
+    height 0.5s ease;
+}
+
+
+/* =========================================================
+   VIEW PROJECT BUTTON
+========================================================= */
+
+.view-projects-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding:
+    13px 15px;
+
+  border:
+    1px solid #d9dad6;
+
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #333;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.view-projects-button:hover {
+  background: #fff;
+
+  border-color: #39725b;
+
+  transform:
+    translateY(-2px);
+}
+
+
+.barcode-small {
+  display: flex;
+
+  align-items: stretch;
+
+  height: 20px;
+
+  gap: 2px;
+}
+
+
+.barcode-small i {
+  display: block;
+
+  width: 2px;
+
+  background: #111;
+}
+
+
+.barcode-small i:nth-child(2n) {
+  width: 1px;
+}
+
+
+.barcode-small i:nth-child(3n) {
+  width: 3px;
+}
+
+
+/* =========================================================
+   WORK STAGE
+========================================================= */
+
+.work-stage {
+  position: relative;
+
+  min-width: 0;
+
+  /*
+   * This creates the distance between
+   * the header and the card.
+   */
+
+  padding-top:
+    clamp(50px, 6vh, 75px);
+}
+
+
+/* =========================================================
+   MAIN PROJECT CARD
+========================================================= */
+
+.main-project-card {
+  position: relative;
+
+  width: 100%;
+
+  /*
+   * THIS IS THE IMPORTANT CHANGE.
+   *
+   * Increase the CARD height,
+   * not the lanyard.
+   */
+   margin-top: -100px;
+
+  min-height: 650px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    190px;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  border:
+    1px solid #dedfdb;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(24, 35, 30, 0.11);
+
+  transform-origin:
+    center top;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   PROJECT TOP
+========================================================= */
+
+.project-top {
+  grid-column: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    110px
+    1fr
+    110px;
+
+  align-items: center;
+
+  min-height: 70px;
+
+  padding:
+    0 25px;
+
+  border-bottom:
+    1px solid #e1e2de;
+}
+
+
+.project-id {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.meta-label {
+  display: block;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  color: #898e8b;
+
+  letter-spacing: 0.7px;
+}
+
+
+.project-id strong {
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+.top-barcode {
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: flex-start;
+
+  height: 32px;
+
+  gap: 2px;
+}
+
+
+.top-barcode i {
+  width: 2px;
+
+  background: #151515;
+}
+
+
+.top-barcode i:nth-child(3n) {
+  width: 4px;
+}
+
+
+.top-barcode i:nth-child(4n) {
+  width: 1px;
+}
+
+
+.project-year {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 2px;
+}
+
+
+.project-year strong {
+  font-size: 21px;
+}
+
+
+.project-year span {
+  color: #39725b;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.project-image-wrap {
+  position: relative;
+
+  grid-column: 1;
+
+  margin:
+    14px 18px;
+
+  /*
+   * Increased image height.
+   */
+
+  height: clamp(380px, 42vh, 450px);
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: #e6e8e4;
+}
+
+
+.project-image {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform
+    0.8s
+    cubic-bezier(.2,.7,.2,1);
+}
+
+
+.main-project-card:hover .project-image {
+  transform:
+    scale(1.035);
+}
+
+
+.image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(0,0,0,0.08)
+    );
+
+  pointer-events: none;
+}
+
+
+.image-tag {
+  position: absolute;
+
+  left: 14px;
+  bottom: 13px;
+
+  padding:
+    7px 11px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255,255,255,0.92);
+
+  color: #333;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.project-bottom {
+  grid-column: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    1fr
+    auto;
+
+  gap: 25px;
+
+  align-items: center;
+
+  padding:
+    20px 22px 24px;
+
+  border-top:
+    1px solid #eeeeeb;
+}
+
+
+.project-main-info h2 {
+  margin:
+    4px 0 2px;
+
+  font-size:
+    clamp(21px, 1.6vw, 28px);
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+
+.project-type {
+  margin: 0;
+
+  color: #777d79;
+
+  font-size: 11px;
+}
+
+
+.project-description p {
+  margin: 0;
+
+  max-width: 310px;
+
+  color: #777d79;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+.project-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+
+  gap: 6px;
+
+  max-width: 240px;
+}
+
+
+.project-tech span {
+  padding:
+    5px 8px;
+
+  border:
+    1px solid #bad0c5;
+
+  border-radius: 5px;
+
+  color: #39725b;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SIDE INFO
+========================================================= */
+
+.project-info-panel {
+  grid-column: 2;
+
+  grid-row:
+    1 / span 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding:
+    25px 20px 18px;
+
+  border-left:
+    1px solid #dedfdb;
+}
+
+
+.info-row {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding:
+    0 0 17px;
+
+  margin-bottom: 15px;
+
+  border-bottom:
+    1px dashed #d9dad6;
+}
+
+
+.info-row span {
+  color: #929793;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+
+.info-row strong {
+  font-size: 11px;
+
+  line-height: 1.3;
+}
+
+
+.status-complete {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #39725b;
+}
+
+
+.status-complete i {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #39725b;
+}
+
+
+.side-barcode {
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+
+  height: 45px;
+
+  gap: 2px;
+
+  margin-top: auto;
+
+  margin-bottom: 7px;
+}
+
+
+.side-barcode i {
+  width: 2px;
+
+  background: #111;
+}
+
+
+.side-barcode i:nth-child(3n) {
+  width: 4px;
+}
+
+
+.side-barcode i:nth-child(5n) {
+  width: 1px;
+}
+
+
+.project-info-panel > small {
+  display: block;
+
+  text-align: center;
+
+  color: #969a97;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   STAGE NAVIGATION
+========================================================= */
+
+.stage-navigation {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+
+.stage-arrow {
+  width: 42px;
+  height: 42px;
+
+  margin-top: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid #dadbd7;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.stage-arrow:hover {
+  transform:
+    translateX(3px);
+
+  border-color:
+    #39725b;
+
+  background:
+    #39725b;
+
+  color:
+    #fff;
+}
+
+
+.stage-arrow:first-child:hover {
+  transform:
+    translateX(-3px);
+}
+
+
+.stage-dots {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 35px;
+}
+
+
+.stage-dots button {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #c9ceca;
+
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.stage-dots button.active {
+  width: 24px;
+
+  border-radius: 10px;
+
+  background: #39725b;
+}
+
+
+/* =========================================================
+   SCROLL HINT
+========================================================= */
+
+.work-scroll-hint {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 16px;
+
+  color: #999e9a;
+
+  font-size: 9px;
+
+  letter-spacing: 0.4px;
+}
+
+
+.scroll-mouse {
+  position: relative;
+
+  width: 10px;
+  height: 16px;
+
+  border:
+    1px solid #858b87;
+
+  border-radius: 7px;
+}
+
+
+.scroll-mouse::after {
+  content: "";
+
+  position: absolute;
+
+  top: 3px;
+  left: 50%;
+
+  width: 2px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 3px;
+
+  background:
+    #39725b;
+
+  animation:
+    scrollDot 1.5s infinite;
+}
+
+
+.scroll-line {
+  width: 65px;
+
+  height: 1px;
+
+  background:
+    #d5d7d3;
+}
+
+
+@keyframes scrollDot {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -2px);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, 5px);
+  }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .work-section {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+
+  .work-layout {
+    grid-template-columns:
+      minmax(290px, 0.45fr)
+      minmax(850px, 1.55fr);
+
+    gap: 90px;
+  }
+
+
+  .main-project-card {
+    min-height: 700px;
+  }
+
+
+  .project-image-wrap {
+    height: 420px;
+  }
+
+}
+
+
+/* =========================================================
+   HEIGHT OPTIMIZATION
+========================================================= */
+
+@media (min-width: 1000px) and (max-height: 850px) {
+
+  .work-section {
+    padding-top: 92px;
+
+    padding-bottom: 35px;
+  }
+
+
+  .work-title {
+    font-size:
+      clamp(50px, 5vw, 78px);
+  }
+
+
+  .work-layout {
+    margin-top: 38px;
+
+    gap: 45px;
+  }
+
+
+  .work-stage {
+    padding-top: 42px;
+  }
+
+
+  /*
+   * IMPORTANT:
+   * Previously this was 370px.
+   * That was making the card too short.
+   */
+
+  .main-project-card {
+    min-height: 580px;
+  }
+
+
+  .project-top {
+    min-height: 56px;
+  }
+
+
+  .project-image-wrap {
+    height: 425px;
+  }
+
+
+  .project-bottom {
+    padding:
+      16px 18px 20px;
+  }
+
+
+  .project-info-panel {
+    padding:
+      20px 15px;
+  }
+
+
+  .info-row {
+    padding-bottom: 12px;
+
+    margin-bottom: 11px;
+  }
+
+
+  .stage-navigation {
+    margin-top: 10px;
+  }
+
+
+  .work-scroll-hint {
+    margin-top: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .work-section {
+    min-height: auto;
+
+    padding:
+      110px 35px 70px;
+  }
+
+
+  .work-layout {
+    grid-template-columns:
+      280px 1fr;
+
+    gap: 35px;
+
+    margin-top: 50px;
+  }
+
+
+  .work-title {
+    font-size: 64px;
+
+    letter-spacing: -3.5px;
+  }
+
+
+  .main-project-card {
+    grid-template-columns:
+      1fr 165px;
+
+    min-height: 620px;
+  }
+
+
+  .project-image-wrap {
+    height: 340px;
+  }
+
+
+  .project-bottom {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 15px;
+  }
+
+
+  .project-tech {
+    grid-column:
+      1 / -1;
+
+    justify-content:
+      flex-start;
+
+    max-width: none;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .work-layout {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .work-sidebar {
+    max-width: 650px;
+  }
+
+
+  .project-list {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    column-gap: 25px;
+  }
+
+
+  .project-nav-item:nth-child(3) {
+    border-top:
+      1px solid #dedfdb;
+  }
+
+
+  .work-stage {
+    padding-top: 40px;
+  }
+
+
+  .hanger-left {
+    left: 25%;
+  }
+
+
+  .hanger-right {
+    right: 25%;
+  }
+
+
+  .main-project-card {
+    min-height: 620px;
+  }
+
+
+  .project-image-wrap {
+    height: 340px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .work-section {
+    padding:
+      95px 18px 55px;
+  }
+
+
+  .work-dots {
+    display: none;
+  }
+
+
+  .work-hanger {
+    display: none;
+  }
+
+
+  .work-label {
+    font-size: 10px;
+
+    gap: 10px;
+  }
+
+
+  .work-label-number {
+    font-size: 18px;
+  }
+
+
+  .work-label-line {
+    width: 30px;
+  }
+
+
+  .work-header-content {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+
+  .work-title {
+    font-size:
+      clamp(44px, 13vw, 60px);
+
+    letter-spacing: -3px;
+  }
+
+
+  .work-subtitle {
+    max-width: 340px;
+
+    font-size: 12px;
+
+    margin-top: 18px;
+  }
+
+
+  .work-counter {
+    padding: 0;
+  }
+
+
+  .counter-current {
+    font-size: 36px;
+  }
+
+
+  .counter-total {
+    font-size: 16px;
+  }
+
+
+  .work-layout {
+    margin-top: 38px;
+
+    gap: 30px;
+  }
+
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+
+  .project-nav-item {
+    min-height: 57px;
+  }
+
+
+  .project-progress {
+    display: none;
+  }
+
+
+  .view-projects-button {
+    display: none;
+  }
+
+
+  .work-stage {
+    padding-top: 0;
+  }
+
+
+  /*
+   * LANYARD IS HIDDEN ON MOBILE
+   */
+
+  .work-hanger {
+    display: none;
+  }
+
+
+  /*
+   * CARD BECOMES NATURAL HEIGHT ON MOBILE
+   */
+
+  .main-project-card {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    border-radius: 18px;
+  }
+
+
+  .project-top {
+    grid-column: 1;
+
+    grid-template-columns:
+      85px 1fr 75px;
+
+    min-height: 58px;
+
+    padding:
+      0 15px;
+  }
+
+
+  .project-id strong {
+    font-size: 20px;
+  }
+
+
+  .top-barcode {
+    height: 25px;
+  }
+
+
+  .project-year strong {
+    font-size: 17px;
+  }
+
+
+  .project-image-wrap {
+    height: 300px;
+
+    margin:
+      10px 10px;
+  }
+
+
+  .project-bottom {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding:
+      15px;
+  }
+
+
+  .project-description p {
+    max-width: none;
+
+    font-size: 11px;
+  }
+
+
+  .project-tech {
+    max-width: none;
+  }
+
+
+  .project-info-panel {
+    grid-column: 1;
+
+    grid-row: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 15px;
+
+    padding:
+      17px 15px;
+
+    border-top:
+      1px solid #dedfdb;
+
+    border-left: none;
+  }
+
+
+  .info-row {
+    margin: 0;
+
+    padding:
+      0 0 10px;
+  }
+
+
+  .side-barcode {
+    display: none;
+  }
+
+
+  .project-info-panel > small {
+    display: none;
+  }
+
+
+  .stage-navigation {
+    margin-top: 15px;
+  }
+
+
+  .stage-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .work-scroll-hint {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .work-section {
+    padding:
+      90px 14px 45px;
+  }
+
+
+  .work-title {
+    font-size: 42px;
+
+    letter-spacing: -2.3px;
+  }
+
+
+  .project-nav-item {
+    grid-template-columns:
+      35px 1fr 20px;
+  }
+
+
+  .nav-project-info strong {
+    font-size: 12px;
+  }
+
+
+  .nav-project-info small {
+    font-size: 9px;
+  }
+
+
+  .project-image-wrap {
+    height: 260px;
+  }
+
+
+  .project-info-panel {
+    gap: 10px;
+
+    padding:
+      14px 12px;
+  }
+
+
+  .info-row strong {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    scroll-behavior:
+      auto !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+  }
+
+}
+.work-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.work-layout {
+  position: relative;
+  z-index: 2;
+}

@@ -1,0 +1,715 @@
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  padding: 70px 4vw;
+
+  background: #fafaf8;
+  color: #111318;
+
+  overflow: hidden;
+}
+
+.about-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1450px;
+
+  min-height: calc(100vh - 140px);
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+
+  gap: 50px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.dots {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  opacity: 0.7;
+
+  background-image: radial-gradient(
+    #284f40 1.5px,
+    transparent 1.5px
+  );
+
+  background-size: 16px 16px;
+
+  pointer-events: none;
+}
+
+.dots-top {
+  top: 25px;
+  right: 40px;
+}
+
+.dots-bottom {
+  bottom: 25px;
+  left: 40px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 25px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.section-number {
+  font-size: 21px;
+
+  color: #356b57;
+
+  font-weight: 700;
+}
+
+.section-line {
+  width: 42px;
+  height: 2px;
+
+  background: #356b57;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.about-intro h2 {
+  margin: 0;
+
+  font-size: clamp(44px, 4.4vw, 68px);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  font-weight: 700;
+}
+
+.about-intro h2 span {
+  color: #39725b;
+}
+
+
+/* =========================================================
+   WAVE
+========================================================= */
+
+.wave {
+  display: flex;
+
+  align-items: center;
+
+  width: 65px;
+  height: 18px;
+
+  margin: 25px 0 20px;
+
+  gap: 2px;
+}
+
+.wave span {
+  width: 15px;
+  height: 8px;
+
+  border-top: 3px solid #39725b;
+
+  border-radius: 50%;
+}
+
+.wave span:nth-child(1) {
+  transform: rotate(25deg);
+}
+
+.wave span:nth-child(2) {
+  transform: rotate(-25deg);
+}
+
+.wave span:nth-child(3) {
+  transform: rotate(25deg);
+}
+
+.wave span:nth-child(4) {
+  transform: rotate(-25deg);
+}
+
+
+/* =========================================================
+   VALUES GRID
+========================================================= */
+
+.values-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+
+  max-width: 500px;
+}
+
+.value-card {
+  min-height: 100px;
+
+  padding: 17px;
+
+  display: flex;
+
+  gap: 14px;
+
+  align-items: flex-start;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e2e2de;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  will-change: transform, opacity;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #b8c9bf;
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.06);
+}
+
+.value-icon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #39725b;
+
+  font-size: 26px;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.12) rotate(-5deg);
+}
+
+.value-card h3 {
+  margin: 0 0 6px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.value-card p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+  color: #666b68;
+}
+
+
+/* =========================================================
+   PEOPLE WRAPPER
+========================================================= */
+
+.people-wrapper {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+
+  padding-top: 20px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   PERSON CARD
+========================================================= */
+
+.person-card {
+  position: relative;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  /*
+   * Increased top padding from 45px → 58px
+   * This creates more breathing room above the image
+   * and makes the card slightly taller.
+   */
+  padding: 58px 24px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6e6e2;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.08);
+
+  transform-origin: center bottom;
+
+  transition:
+    box-shadow 0.4s ease;
+
+  will-change: transform, opacity;
+}
+
+.person-card:hover {
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   STRAP
+========================================================= */
+
+.strap {
+  position: absolute;
+
+  top: -50px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 48px;
+  height: 62px;
+
+  background: repeating-linear-gradient(
+    90deg,
+    #171717 0px,
+    #171717 4px,
+    #252525 4px,
+    #252525 8px
+  );
+
+  border-radius: 0 0 8px 8px;
+
+  z-index: 1;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   CLIP
+========================================================= */
+
+.clip {
+  position: absolute;
+
+  top: 22px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 22px;
+  height: 22px;
+
+  border: 4px solid #555;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  z-index: 3;
+
+  will-change: transform, opacity;
+}
+
+
+/* =========================================================
+   PERSON IMAGE
+========================================================= */
+
+.person-image {
+  width: 100%;
+
+  height: 250px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: #d7ddd5;
+}
+
+.person-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  will-change: transform;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.person-card:hover .person-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   PERSON NAME
+========================================================= */
+
+.person-name {
+  margin: 17px 0 4px;
+
+  font-size: 25px;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================================
+   PERSON ROLE
+========================================================= */
+
+.person-role {
+  margin: 0;
+
+  color: #39725b;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SMALL LINE
+========================================================= */
+
+.small-line {
+  width: 30px;
+
+  height: 3px;
+
+  margin: 10px 0 12px;
+
+  background: #39725b;
+
+  border-radius: 5px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.person-description {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  color: #555b58;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.about-intro,
+.section-label,
+.about-title-line,
+.wave,
+.value-card,
+.person-card,
+.strap,
+.clip {
+  will-change: transform, opacity;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .about-section {
+    padding: 60px 4vw;
+  }
+
+  .about-container {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .about-intro {
+    max-width: 800px;
+  }
+
+  .values-grid {
+    max-width: 650px;
+  }
+
+  .people-wrapper {
+    padding-top: 0;
+  }
+}
+
+
+/* =========================================================
+   TABLET SMALL
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-section {
+    padding: 60px 25px;
+  }
+
+  .about-container {
+    gap: 55px;
+  }
+
+  .about-intro h2 {
+    font-size: 54px;
+  }
+
+  .people-wrapper {
+    gap: 20px;
+  }
+
+  .person-image {
+    height: 230px;
+  }
+
+  .person-card {
+    /*
+     * Increased from 42px → 52px
+     */
+    padding: 52px 20px 22px;
+  }
+
+  .person-name {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .about-section {
+    min-height: auto;
+
+    padding: 70px 20px;
+  }
+
+  .about-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 55px;
+  }
+
+  .about-intro {
+    width: 100%;
+  }
+
+  .section-label {
+    margin-bottom: 22px;
+  }
+
+  .about-intro h2 {
+    font-size: 47px;
+
+    letter-spacing: -2px;
+  }
+
+  .wave {
+    margin: 22px 0 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    gap: 12px;
+  }
+
+  .value-card {
+    min-height: 90px;
+  }
+
+  .people-wrapper {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    padding-top: 0;
+  }
+
+  .person-card {
+    width: 100%;
+
+    /*
+     * More top space on mobile as well
+     */
+    padding: 55px 20px 25px;
+  }
+
+  .person-image {
+    height: 280px;
+  }
+
+  .person-name {
+    font-size: 25px;
+  }
+
+  .dots {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .about-section {
+    padding: 60px 16px;
+  }
+
+  .about-intro h2 {
+    font-size: 40px;
+  }
+
+  .person-card {
+    padding: 52px 18px 24px;
+  }
+
+  .person-image {
+    height: 240px;
+  }
+
+  .person-name {
+    font-size: 23px;
+  }
+
+  .person-description {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-intro,
+  .section-label,
+  .about-title-line,
+  .wave,
+  .value-card,
+  .person-card,
+  .strap,
+  .clip {
+    opacity: 1 !important;
+
+    transform: none !important;
+  }
+
+  .person-image img {
+    transform: none !important;
+  }
+}
+
+
+/* =========================================================
+   FALLBACK
+========================================================= */
+
+@supports not (backdrop-filter: blur(10px)) {
+
+  .person-card {
+    background: #ffffff;
+  }
+
+}
