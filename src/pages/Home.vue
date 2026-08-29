@@ -3,7 +3,7 @@
 import Navbar from "../components/Navbar/Navbar.vue";
 
 import Hero from "../sections/Hero/Hero.vue";
-import About from "../sections/About/About.vue";
+import About from "../sections/about/About.vue";
 import Work from "../sections/work/work.vue";
 import Services from "../sections/Services/Services.vue";
 import Contact from "../sections/Contact/Contact.vue";
