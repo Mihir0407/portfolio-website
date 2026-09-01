@@ -26,13 +26,14 @@ const route = useRoute();
 
 
 // ============================================
-// SECTIONS
+// NAVIGATION
 // ============================================
 
 const sections = [
   "home",
   "about",
   "work",
+  "portfolio",
   "services",
   "contact",
 ];
@@ -106,12 +107,31 @@ const scrollToSection = (
 
 
 // ============================================
-// NAVIGATE TO SECTION
+// NAVIGATE TO SECTION / PAGE
 // ============================================
 
 const navigateTo = async (
   sectionId: string
 ) => {
+
+  // ==========================================
+  // PORTFOLIO PAGE
+  // ==========================================
+
+  if (sectionId === "portfolio") {
+
+    if (route.path !== "/portfolio") {
+
+      await router.push("/portfolio");
+
+    }
+
+    activeSection.value = "portfolio";
+
+    return;
+
+  }
+
 
   // ==========================================
   // ALREADY ON HOME
@@ -127,8 +147,11 @@ const navigateTo = async (
     if (route.hash !== `#${sectionId}`) {
 
       await router.replace({
+
         path: "/",
+
         hash: `#${sectionId}`,
+
       });
 
     }
@@ -167,8 +190,11 @@ const navigateTo = async (
   // ==========================================
 
   await router.push({
+
     path: "/",
+
     hash: `#${sectionId}`,
+
   });
 
 
@@ -199,9 +225,22 @@ const navigateTo = async (
 
 const updateActiveSection = () => {
 
-  /*
-   * Active section only matters on Home.
-   */
+  // ==========================================
+  // PORTFOLIO PAGE
+  // ==========================================
+
+  if (route.path === "/portfolio") {
+
+    activeSection.value = "portfolio";
+
+    return;
+
+  }
+
+
+  // ==========================================
+  // OTHER NON-HOME PAGES
+  // ==========================================
 
   if (route.path !== "/") {
 
@@ -212,6 +251,10 @@ const updateActiveSection = () => {
   }
 
 
+  // ==========================================
+  // HOME SECTIONS
+  // ==========================================
+
   const scrollPosition =
     window.scrollY +
     NAVBAR_OFFSET +
@@ -221,7 +264,22 @@ const updateActiveSection = () => {
   let current = "home";
 
 
-  for (const id of sections) {
+  /*
+   * Portfolio is a separate page,
+   * so it must NOT be included in
+   * the section-position calculation.
+   */
+
+  const homeSections = [
+    "home",
+    "about",
+    "work",
+    "services",
+    "contact",
+  ];
+
+
+  for (const id of homeSections) {
 
     const section =
       getSection(id);
@@ -300,6 +358,7 @@ const handleInitialHash = async () => {
     return;
   }
 
+
   if (!route.hash) {
     return;
   }
@@ -309,8 +368,17 @@ const handleInitialHash = async () => {
     route.hash.substring(1);
 
 
-  if (!sections.includes(id)) {
+  /*
+   * Portfolio is a page, not a Home section.
+   */
+
+  if (
+    !sections.includes(id) ||
+    id === "portfolio"
+  ) {
+
     return;
+
   }
 
 
@@ -450,14 +518,20 @@ onUnmounted(() => {
       >
 
         <a
-          :href="`/#${section}`"
+          :href="
+            section === 'portfolio'
+              ? '/portfolio'
+              : `/#${section}`
+          "
 
           class="nav-link"
 
           :class="{
             active:
-              route.path === '/' &&
-              activeSection === section
+              (route.path === '/' &&
+                activeSection === section) ||
+              (route.path === '/portfolio' &&
+                section === 'portfolio')
           }"
 
           @click.prevent="

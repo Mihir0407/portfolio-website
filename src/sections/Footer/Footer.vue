@@ -100,6 +100,7 @@
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#work">Work</a>
+          <a href="#portfolio">Portfolio</a>
           <a href="#services">Services</a>
           <a href="#contact">Contact</a>
 
@@ -107,7 +108,7 @@
 
 
         <!-- CONTACT -->
-
+ 
         <div class="footer-column">
 
           <span class="footer-column-title">
@@ -152,7 +153,7 @@
   </a>
 
   <a
-    href="#"
+    href="https://www.behance.net/creativedesignerin"
     target="_blank"
     rel="noopener"
   >

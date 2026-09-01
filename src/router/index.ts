@@ -94,10 +94,6 @@ const router = createRouter({
     // ------------------------------------------
     // HASH NAVIGATION
     // ------------------------------------------
-    //
-    // Navbar handles scrolling to sections
-    // manually.
-    //
 
     if (to.hash) {
 
@@ -109,17 +105,17 @@ const router = createRouter({
     // ------------------------------------------
     // HOME PAGE
     // ------------------------------------------
-    //
-    // Whenever we enter the homepage,
-    // start from the hero at the very top.
-    //
 
     if (to.path === "/") {
 
       return {
+
         top: 0,
+
         left: 0,
+
         behavior: "auto",
+
       };
 
     }
@@ -132,9 +128,13 @@ const router = createRouter({
     if (to.path !== from.path) {
 
       return {
+
         top: 0,
+
         left: 0,
+
         behavior: "auto",
+
       };
 
     }
