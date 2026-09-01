@@ -170,7 +170,7 @@ onBeforeUnmount(() => {
       side="left"
       :position="2"
       service="Industrial Brochure Design"
-      image="/images/brochure.jpeg"
+      image="/brochure/bh.png"
       number="002"
     />
 
@@ -178,7 +178,7 @@ onBeforeUnmount(() => {
       side="left"
       :position="3"
       service="Food Packaging Design"
-      image="/images/packaging.jpg"
+      image="food-packing/fp1/fp1.1.png"
       number="003"
     />
 
