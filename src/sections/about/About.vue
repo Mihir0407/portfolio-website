@@ -35,10 +35,10 @@ const people = [
     number: '01',
     name: 'Saurbh Joshi',
     role: 'Designer & Digital Strategist',
-    image: '/images/saurbh.jpg',
+    image: '/images/saurbh.png',
     description:
       'Creative designer who believes in the power of visual storytelling. I craft engaging designs and strategies that connect brands with people and create lasting impact.'
-  
+
   },
   {
     number: '02',
@@ -46,8 +46,8 @@ const people = [
     role: 'Developer & Creative Technologist',
     image: '/images/mihir.jpg',
     description:
-    'Passionate developer who loves turning ideas into scalable digital solutions. I enjoy working with modern technologies.'
-  },  
+      'Passionate developer who loves turning ideas into scalable digital solutions. I enjoy working with modern technologies.'
+  },
 ]
 
 let animationContext = null
@@ -105,8 +105,8 @@ onMounted(() => {
       scrollTrigger: {
         trigger: '.about-section',
         start: 'top 75%',
-        end: 'bottom 70%',
-        scrub: 0.6,
+        end: 'top 35%',
+        scrub: 0.3,
         markers: false
       }
     })
@@ -218,10 +218,7 @@ onUnmounted(() => {
 
 <template>
 
-  <section
-    id="about"
-    class="about-section"
-  >
+  <section id="about" class="about-section">
 
     <div class="dots dots-top"></div>
     <div class="dots dots-bottom"></div>
@@ -240,7 +237,7 @@ onUnmounted(() => {
 
           <span class="section-line"></span>
 
-          <span>
+          <span class="title">
             ABOUT US
           </span>
 
@@ -271,11 +268,7 @@ onUnmounted(() => {
 
         <div class="values-grid">
 
-          <div
-            v-for="value in values"
-            :key="value.title"
-            class="value-card"
-          >
+          <div v-for="value in values" :key="value.title" class="value-card">
 
             <div class="value-icon">
               {{ value.icon }}
@@ -302,11 +295,7 @@ onUnmounted(() => {
 
       <div class="people-wrapper">
 
-        <div
-          v-for="person in people"
-          :key="person.name"
-          class="person-card"
-        >
+        <div v-for="person in people" :key="person.name" class="person-card">
 
           <div class="strap"></div>
 
@@ -314,10 +303,7 @@ onUnmounted(() => {
 
           <div class="person-image">
 
-            <img
-              :src="person.image"
-              :alt="person.name"
-            />
+            <img :src="person.image" :alt="person.name" />
 
           </div>
 

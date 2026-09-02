@@ -8,10 +8,13 @@ import Work from "../sections/work/work.vue";
 import Services from "../sections/Services/Services.vue";
 import Contact from "../sections/Contact/Contact.vue";
 import Footer from '../sections/Footer/Footer.vue'
+import preloader from '../components/preloader/LoadingScreen.vue'
 
 </script>
 
 <template>
+
+  <preloader/>
 
   <div class="app">
 

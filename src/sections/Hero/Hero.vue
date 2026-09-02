@@ -178,7 +178,7 @@ onBeforeUnmount(() => {
       side="left"
       :position="3"
       service="Food Packaging Design"
-      image="food-packing/fp1/fp1.1.png"
+      image="/food-packing/fp1/fp1.webp"
       number="003"
     />
 

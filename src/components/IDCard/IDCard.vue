@@ -222,11 +222,14 @@ onBeforeUnmount(() => {
       <div class="card-inner">
 
         <!-- BRAND -->
-        <div class="card-brand">
-          <div class="brand-mark">f</div>
-
-          <span>freesamric</span>
-        </div>
+        <!-- BRAND -->
+<div class="card-brand">
+  <img
+    src="/images/karm-logo.png"
+    alt="Karm Design Studio"
+    class="card-logo"
+  />
+</div>
 
         <!-- PORTFOLIO IMAGE -->
         <div class="id-photo">

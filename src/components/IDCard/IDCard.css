@@ -118,7 +118,7 @@
   left: 50%;
 
   width: 26px;
-  height: 215px;
+  height: 225px;
 
   transform: translateX(-50%);
 
@@ -156,6 +156,8 @@
 
 .strap-weave {
   position: absolute;
+
+  height: 200px;
 
   inset: 0;
 
@@ -227,6 +229,8 @@
 
 .strap-fold {
   position: absolute;
+  
+  margin-top: 10px  ;
 
   left: 50%;
   top: 199px;
@@ -262,6 +266,8 @@
 .strap-fold span {
   position: absolute;
 
+  margin-top: 5px;
+
   left: 3px;
   right: 3px;
 
@@ -292,6 +298,7 @@
 
 .lanyard-ring {
   position: absolute;
+  margin-top: 25px;
 
   left: 50%;
   top: 218px;
@@ -479,46 +486,36 @@
 /* =========================================================
    BRAND
 ========================================================= */
-
 .card-brand {
   display: flex;
 
   align-items: center;
 
-  gap: 6px;
+  justify-content: flex-start;
+
+  width: 100%;
 
   height: 25px;
+}
+.card-logo {
+  display: block;
 
-  color: #22211f;
+  width: 82px;
+  height: 24px;
 
-  font-family: "Manrope", sans-serif;
+  object-fit: contain;
+  object-position: left center;
+}
+/* =========================================================
+   RIGHT SIDE CARDS — LOGO ON TOP RIGHT
+========================================================= */
 
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: -0.1px;
+.id-card-wrapper.right .card-brand {
+  justify-content: flex-end;
 }
 
-
-.brand-mark {
-  width: 15px;
-  height: 15px;
-
-  display: grid;
-
-  place-items: center;
-
-  border-radius: 50%;
-
-  color: white;
-
-  background: rgba(25, 25, 24, 0.92);
-
-  font-size: 9px;
-
-  box-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.12);
+.id-card-wrapper.right .card-logo {
+  object-position: right center;
 }
 
 
@@ -1164,4 +1161,22 @@
   .card-inner {
     background: rgba(255, 255, 255, 0.2);
   }
+}
+/* FOOD PACKAGING #003 */
+.id-card-wrapper.left.position-3 .id-photo img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  filter: none;
+}
+
+@media (max-width: 800px) {
+  .card-brand {
+  height: 16px;
+}
+
+.card-logo {
+  width: 52px;
+  height: 15px;
+}
 }

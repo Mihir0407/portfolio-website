@@ -293,29 +293,17 @@
 
 }
 
-
 .footer-logo {
-
-  width: 50px;
-
-  height: 50px;
-
   display: flex;
-
   align-items: center;
+  flex-shrink: 0;
+}
 
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #202220;
-
-  color: white;
-
-  font-size: 22px;
-
-  font-weight: 600;
-
+.footer-logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 
@@ -741,4 +729,26 @@
 
 .footer-column.legal-column a:hover {
   color: #43816d;
+}
+
+@media (max-width: 600px) {
+
+  .footer-logo img {
+    width: 135px;
+  }
+
+}
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.footer-brand p {
+  max-width: 220px;
+  margin: 0;
+  color: #8b908c;
+  font-size: 14px;
+  line-height: 1.5;
 }

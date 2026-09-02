@@ -69,24 +69,22 @@
 
         <div class="footer-brand">
 
-          <div class="footer-logo">
-            F
-          </div>
+  <div class="footer-logo">
+    <img
+      src="/images/karm-logo.png"
+      alt="Karm Design Studio"
+    />
+  </div>
 
-          <div>
 
-            <h3>
-              freelancer
-            </h3>
+    <p>
+      Creative design &amp;
+      digital experiences.
+    </p>
 
-            <p>
-              Creative design &amp;
-              digital experiences.
-            </p>
 
-          </div>
 
-        </div>
+</div>
 
 
         <!-- NAVIGATION -->

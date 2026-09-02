@@ -1,4 +1,7 @@
 <template>
+  <preloader></preloader>
+
+  <navbar></navbar>
   <main class="portfolio-page">
 
     <!-- =========================================
@@ -710,6 +713,9 @@ import {
 } from "../sections/work/workData";
 
 import "./Portfolio.css";
+
+import preloader from '../components/preloader/LoadingScreen.vue'
+import navbar from '../components/Navbar/Navbar.vue'
 
 
 // =====================================================

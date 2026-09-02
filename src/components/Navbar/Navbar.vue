@@ -485,26 +485,17 @@ onUnmounted(() => {
     <!-- ======================================
          LOGO
     ======================================= -->
-
-    <a
-      href="/"
-      class="nav-logo"
-
-      @click.prevent="
-        navigateTo('home')
-      "
-    >
-
-      <span class="logo-icon">
-        F
-      </span>
-
-      <span class="logo-text">
-        freelancer
-      </span>
-
-    </a>
-
+<a
+  href="/"
+  class="nav-logo"
+  @click.prevent="navigateTo('home')"
+>
+  <img
+    src="/images/karm-logo.png"
+    alt="Karm Design Studio"
+    class="nav-logo-image"
+  />
+</a>
 
     <!-- ======================================
          NAVIGATION

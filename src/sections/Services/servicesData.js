@@ -9,17 +9,17 @@ export const services = [
 
   {
     id: "02",
-    title: "Digital Marketing",
+    title: "Digital Marketing & Consulting",
     description:
-      "Driving growth through strategic marketing, SEO, and performance campaigns.",
+      "Data-driven digital strategies that build brand visibility, engage audiences, and drive measurable business growth.",
     icon: "◢",
   },
 
   {
     id: "03",
-    title: "Maintenance & Support",
+    title: "Packaging Design",
     description:
-      "Providing ongoing support and maintenance to keep your digital products running perfectly.",
+      "Creative and functional packaging designs that make products stand out, communicate clearly, and create a strong shelf presence.",
     icon: "⚙",
   },
 

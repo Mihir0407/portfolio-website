@@ -1,4 +1,5 @@
 <template>
+  <preloader></preloader>
   <div class="policy-page">
 
     <Navbar />
@@ -177,7 +178,7 @@
 
 import Navbar from "../components/Navbar/Navbar.vue";
 import Footer from "../sections/Footer/Footer.vue";
-
+import preloader from "../components/preloader/LoadingScreen.vue"
 import "./Policy.css";
 
 </script>

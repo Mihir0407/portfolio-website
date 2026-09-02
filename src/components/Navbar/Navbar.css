@@ -217,7 +217,7 @@
 
   border-radius: 10px;
 
-  background: #171717;
+  background: #111111;  
 
   transition:
     width 0.3s ease;
@@ -237,6 +237,7 @@
 .nav-link.active::after {
 
   width: 34px;
+    background: #111111
 
 }
 
@@ -495,6 +496,64 @@
 
     display: none;
 
+  }
+
+}
+/* =========================================================
+   NAVBAR LOGO
+========================================================= */
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+
+  width: 180px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+.nav-logo-image {
+  display: block;
+
+  width: 180px;
+  height: auto;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.nav-logo:hover .nav-logo-image {
+  transform: scale(1.03);
+}
+@media (max-width: 900px) {
+
+  .nav-logo {
+    width: 145px;
+    height: 48px;
+  }
+
+  .nav-logo-image {
+    width: 145px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .nav-logo {
+    width: 125px;
+    height: 42px;
+  }
+
+  .nav-logo-image {
+    width: 125px;
   }
 
 }
