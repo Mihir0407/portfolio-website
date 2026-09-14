@@ -1,6 +1,6 @@
 .policy-page {
   min-height: 100vh;
-  background: #f8f8f5;
+  background: #F8F8F5;
   color: #171918;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .section-number {
-  color: #43816d;
+  color: #F79F31;
   font-size: 24px;
   font-weight: 600;
 }
@@ -41,7 +41,7 @@
 .section-line {
   width: 58px;
   height: 2px;
-  background: #43816d;
+  background: #F79F31;
 }
 
 
@@ -52,13 +52,13 @@
 .policy-header {
   max-width: 900px;
   padding-bottom: 80px;
-  border-bottom: 1px solid #dedfdb;
+  border-bottom: 1px solid #DEDFDB;
 }
 
 .eyebrow {
   margin: 0 0 20px;
 
-  color: #43816d;
+  color: #F79F31;
 
   font-size: 12px;
   font-weight: 700;
@@ -68,6 +68,8 @@
 .policy-header h1 {
   margin: 0;
 
+  color: #171918;
+
   font-size: clamp(60px, 8vw, 110px);
   line-height: 0.92;
 
@@ -76,7 +78,7 @@
 }
 
 .policy-header h1 span {
-  color: #43816d;
+  color: #F79F31;
 }
 
 .policy-intro {
@@ -84,7 +86,7 @@
 
   margin-top: 40px;
 
-  color: #777c78;
+  color: #4B4B4D;
 
   font-size: 18px;
   line-height: 1.7;
@@ -95,7 +97,7 @@
 
   margin-top: 35px;
 
-  color: #9a9e9b;
+  color: #4B4B4D;
 
   font-size: 11px;
   font-weight: 700;
@@ -121,11 +123,11 @@
 
   padding: 55px 0;
 
-  border-bottom: 1px solid #dedfdb;
+  border-bottom: 1px solid #DEDFDB;
 }
 
 .policy-number {
-  color: #43816d;
+  color: #F79F31;
 
   font-size: 13px;
   font-weight: 700;
@@ -134,6 +136,8 @@
 
 .policy-content h2 {
   margin: 0 0 18px;
+
+  color: #171918;
 
   font-size: 30px;
   font-weight: 500;
@@ -146,10 +150,29 @@
 
   margin: 0;
 
-  color: #777c78;
+  color: #4B4B4D;
 
   font-size: 17px;
   line-height: 1.8;
+}
+
+
+/* =================================
+   LINKS
+================================= */
+
+.policy-content a {
+  color: #171918;
+
+  text-decoration: underline;
+  text-decoration-color: #F79F31;
+  text-underline-offset: 4px;
+
+  transition: color 0.3s ease;
+}
+
+.policy-content a:hover {
+  color: #F79F31;
 }
 
 

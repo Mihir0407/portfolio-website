@@ -223,13 +223,13 @@ onBeforeUnmount(() => {
 
         <!-- BRAND -->
         <!-- BRAND -->
-<div class="card-brand">
+<!-- <div class="card-brand">
   <img
     src="/images/karm-logo.png"
     alt="Karm Design Studio"
     class="card-logo"
   />
-</div>
+</div> -->
 
         <!-- PORTFOLIO IMAGE -->
         <div class="id-photo">

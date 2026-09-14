@@ -132,7 +132,7 @@
             SOCIAL
           </span>
 
-          <a href="#" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/company/karm-design-studio/" target="_blank" rel="noopener">
             LinkedIn ↗
           </a>
 
@@ -175,7 +175,7 @@
       <div class="footer-bottom">
 
         <span>
-          © 2026 Freelancer. All rights reserved.
+          © 2026 karm design studio. All rights reserved.
         </span>
 
 
