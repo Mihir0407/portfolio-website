@@ -39,6 +39,15 @@
               contact@karmdesignstudio.com
             </a>
           </div>
+          <!-- PHONE -->
+  <div class="detail-item">
+    <span class="detail-label">PHONE</span>
+
+    <a href="tel:+919XXXXXXXXX">
+      +91 9909565916
+    </a>
+  </div>
+
 
           <div class="detail-item">
             <span class="detail-label">LOCATION</span>
