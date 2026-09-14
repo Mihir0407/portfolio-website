@@ -26,7 +26,7 @@ const route = useRoute();
 
 
 // ============================================
-// NAVIGATION
+// NAVIGATION SECTIONS
 // ============================================
 
 const sections = [
@@ -44,7 +44,16 @@ const sections = [
 // ============================================
 
 const activeSection = ref("home");
+const isMenuOpen = ref(false);
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+  document.body.classList.toggle("menu-open", isMenuOpen.value);
+};
 
+const closeMenu = () => {
+  isMenuOpen.value = false;
+  document.body.classList.remove("menu-open");
+};
 
 // ============================================
 // NAVBAR OFFSET
@@ -58,9 +67,7 @@ const NAVBAR_OFFSET = 120;
 // ============================================
 
 const getSection = (id: string) => {
-
   return document.getElementById(id);
-
 };
 
 
@@ -79,11 +86,9 @@ const scrollToSection = (
     return;
   }
 
-
   const sectionTop =
     section.getBoundingClientRect().top +
     window.scrollY;
-
 
   const target =
     Math.max(
@@ -91,18 +96,10 @@ const scrollToSection = (
       sectionTop - NAVBAR_OFFSET
     );
 
-
   window.scrollTo({
-
     top: target,
-
-    behavior:
-      smooth
-        ? "smooth"
-        : "auto",
-
+    behavior: smooth ? "smooth" : "auto",
   });
-
 };
 
 
@@ -113,7 +110,7 @@ const scrollToSection = (
 const navigateTo = async (
   sectionId: string
 ) => {
-
+    closeMenu();
   // ==========================================
   // PORTFOLIO PAGE
   // ==========================================
@@ -121,15 +118,12 @@ const navigateTo = async (
   if (sectionId === "portfolio") {
 
     if (route.path !== "/portfolio") {
-
       await router.push("/portfolio");
-
     }
 
     activeSection.value = "portfolio";
 
     return;
-
   }
 
 
@@ -139,35 +133,20 @@ const navigateTo = async (
 
   if (route.path === "/") {
 
-    /*
-     * Update URL hash without allowing
-     * Vue Router to perform its own scrolling.
-     */
-
+    // Update URL hash
     if (route.hash !== `#${sectionId}`) {
 
       await router.replace({
-
         path: "/",
-
         hash: `#${sectionId}`,
-
       });
 
     }
 
-
-    /*
-     * Wait for Vue DOM update.
-     */
-
+    // Wait for Vue DOM update
     await nextTick();
 
-
-    /*
-     * Wait for GSAP / ScrollTrigger layout.
-     */
-
+    // Wait for layout / GSAP
     setTimeout(() => {
 
       scrollToSection(
@@ -179,32 +158,22 @@ const navigateTo = async (
 
     }, 50);
 
-
     return;
-
   }
 
 
   // ==========================================
-  // OTHER PAGE
+  // OTHER PAGE → HOME
   // ==========================================
 
   await router.push({
-
     path: "/",
-
     hash: `#${sectionId}`,
-
   });
-
 
   await nextTick();
 
-
-  /*
-   * Wait until Home + GSAP are mounted.
-   */
-
+  // Wait for Home page to mount
   setTimeout(() => {
 
     scrollToSection(
@@ -215,7 +184,6 @@ const navigateTo = async (
     updateActiveSection();
 
   }, 250);
-
 };
 
 
@@ -234,7 +202,6 @@ const updateActiveSection = () => {
     activeSection.value = "portfolio";
 
     return;
-
   }
 
 
@@ -247,7 +214,6 @@ const updateActiveSection = () => {
     activeSection.value = "";
 
     return;
-
   }
 
 
@@ -260,15 +226,8 @@ const updateActiveSection = () => {
     NAVBAR_OFFSET +
     20;
 
-
   let current = "home";
 
-
-  /*
-   * Portfolio is a separate page,
-   * so it must NOT be included in
-   * the section-position calculation.
-   */
 
   const homeSections = [
     "home",
@@ -301,13 +260,10 @@ const updateActiveSection = () => {
       current = id;
 
     }
-
   }
 
 
-  activeSection.value =
-    current;
-
+  activeSection.value = current;
 };
 
 
@@ -318,9 +274,7 @@ const updateActiveSection = () => {
 const updateNavbarState = () => {
 
   const navbar =
-    document.querySelector(
-      ".navbar"
-    );
+    document.querySelector(".navbar");
 
   if (!navbar) {
     return;
@@ -331,7 +285,6 @@ const updateNavbarState = () => {
     "navbar-scrolled",
     window.scrollY > 40
   );
-
 };
 
 
@@ -344,7 +297,6 @@ const handleScroll = () => {
   updateActiveSection();
 
   updateNavbarState();
-
 };
 
 
@@ -368,17 +320,13 @@ const handleInitialHash = async () => {
     route.hash.substring(1);
 
 
-  /*
-   * Portfolio is a page, not a Home section.
-   */
-
+  // Portfolio is a separate page
   if (
     !sections.includes(id) ||
     id === "portfolio"
   ) {
 
     return;
-
   }
 
 
@@ -395,7 +343,6 @@ const handleInitialHash = async () => {
     updateActiveSection();
 
   }, 250);
-
 };
 
 
@@ -406,7 +353,7 @@ const handleInitialHash = async () => {
 onMounted(async () => {
 
   // ==========================================
-  // NAVBAR ENTRANCE
+  // NAVBAR ENTRANCE ANIMATION
   // ==========================================
 
   gsap.fromTo(
@@ -429,7 +376,6 @@ onMounted(async () => {
       delay: 0.15,
 
       ease: "power3.out",
-
     }
 
   );
@@ -457,7 +403,6 @@ onMounted(async () => {
   updateNavbarState();
 
   await handleInitialHash();
-
 });
 
 
@@ -485,17 +430,21 @@ onUnmounted(() => {
     <!-- ======================================
          LOGO
     ======================================= -->
-<a
-  href="/"
-  class="nav-logo"
-  @click.prevent="navigateTo('home')"
->
-  <img
-    src="/images/karm-logo.png"
-    alt="Karm Design Studio"
-    class="nav-logo-image"
-  />
-</a>
+
+    <a
+      href="/"
+      class="nav-logo"
+      @click.prevent="navigateTo('home')"
+    >
+
+      <img
+        src="/images/karm-logo.png"
+        alt="Karm Design Studio"
+        class="nav-logo-image"
+      />
+
+    </a>
+
 
     <!-- ======================================
          NAVIGATION
@@ -552,7 +501,7 @@ onUnmounted(() => {
       "
     >
 
-      <span>
+      <span class="nav-cta-text">
         Let's talk
       </span>
 
@@ -561,7 +510,92 @@ onUnmounted(() => {
       </span>
 
     </a>
+    <button
+  class="mobile-menu-button"
+  type="button"
+  aria-label="Open navigation menu"
+  :aria-expanded="isMenuOpen"
+  @click="toggleMenu"
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
   </nav>
+  <Transition name="mobile-overlay">
+  <div
+    v-if="isMenuOpen"
+    class="mobile-menu-overlay"
+    @click="closeMenu"
+  ></div>
+</Transition>
+
+<Transition name="mobile-sidebar">
+  <aside
+    v-if="isMenuOpen"
+    class="mobile-sidebar"
+  >
+
+    <div class="mobile-sidebar-header">
+      <span>MENU</span>
+
+      <button
+        class="mobile-menu-close"
+        type="button"
+        @click="closeMenu"
+      >
+        ×
+      </button>
+    </div>
+
+    <nav class="mobile-navigation">
+
+      <a
+        v-for="(section, index) in sections"
+        :key="section"
+        :href="
+          section === 'portfolio'
+            ? '/portfolio'
+            : `/#${section}`
+        "
+        class="mobile-nav-link"
+        :class="{
+          active:
+            (route.path === '/' &&
+              activeSection === section) ||
+            (route.path === '/portfolio' &&
+              section === 'portfolio')
+        }"
+        @click.prevent="navigateTo(section)"
+      >
+
+        <span class="mobile-nav-number">
+          {{ String(index + 1).padStart(2, "0") }}
+        </span>
+
+        <span class="mobile-nav-name">
+          {{ section }}
+        </span>
+
+        <span class="mobile-nav-arrow">
+          ↗
+        </span>
+
+      </a>
+
+    </nav>
+
+    <a
+      href="/#contact"
+      class="mobile-sidebar-cta"
+      @click.prevent="navigateTo('contact')"
+    >
+      <span>Let's talk</span>
+      <span>↗</span>
+    </a>
+
+  </aside>
+</Transition>
 
 </template>

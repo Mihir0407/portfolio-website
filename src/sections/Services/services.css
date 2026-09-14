@@ -21,7 +21,7 @@
 
   background: #fafaf8;
 
-  color: #111318;
+  color: #4B4B4D;
 
 }
 
@@ -76,7 +76,7 @@
 
   background-image:
     radial-gradient(
-      #39725b 1.5px,
+      #F79F31 1.5px,
       transparent 1.5px
     );
 
@@ -142,7 +142,7 @@
 
 .services-label-number {
 
-  color: #39725b;
+  color: #F79F31;
 
   font-size: 22px;
 
@@ -155,7 +155,7 @@
 
   height: 2px;
 
-  background: #39725b;
+  background: #F79F31;
 
 }
 
@@ -182,7 +182,7 @@
 
 .services-title span {
 
-  color: #39725b;
+  color: #F79F31;
 
 }
 
@@ -232,7 +232,7 @@
 
   border-radius: 30px;
 
-  color: #39725b;
+  color: #F79F31;
 
   font-size: 10px;
 
@@ -251,10 +251,10 @@
 
   border-radius: 50%;
 
-  background: #39725b;
+  background: #F79F31;
 
   box-shadow:
-    0 0 0 4px rgba(57,114,91,0.08);
+    0 0 0 4px rgba(247,159,49,0.08);
 
 }
 
@@ -289,7 +289,7 @@
 
   margin-top: 8px;
 
-  color: #39725b;
+  color: #F79F31;
 
   font-family: cursive;
 
@@ -345,7 +345,7 @@
 
   width: 2px;
 
-  background: #151515;
+  background: #4B4B4D;
 
 }
 
@@ -441,7 +441,7 @@
 
   height: 3px;
 
-  background: #39725b;
+  background: #F79F31;
 
   transform:
     scaleX(0);
@@ -505,7 +505,7 @@
   background:
     #eef3f0;
 
-  color: #39725b;
+  color: #F79F31;
 
   font-size: 25px;
 
@@ -552,7 +552,7 @@
 
   margin: 0;
 
-  color: #151719;
+  color: #4B4B4D;
 
   font-size:
     clamp(18px, 1.25vw, 23px);
@@ -572,7 +572,7 @@
 
   margin-top: 17px;
 
-  background: #39725b;
+  background: #F79F31;
 
 }
 
@@ -621,7 +621,7 @@
 
 .service-arrow {
 
-  color: #39725b;
+  color: #F79F31;
 
   font-size: 17px;
 

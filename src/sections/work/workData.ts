@@ -493,7 +493,11 @@ const projects: Project[] = [
       "BRANDING"
     ],
 
-    image: "/brochure/b1.jpeg"
+    image: "/brochure/b1/b1.1.jpeg",
+
+    gallery: [
+      "/brochure/b1/b1.1.jpeg",
+    ]
   },
 
 
@@ -518,7 +522,11 @@ const projects: Project[] = [
       "CORPORATE DESIGN"
     ],
 
-    image: "/brochure/b2.jpeg"
+    image: "/brochure/b2/b2.1.jpeg",
+
+    gallery: [
+      "/brochure/b2/b2.1.jpeg",
+    ]
   },
 
 
@@ -543,7 +551,11 @@ const projects: Project[] = [
       "PRINT DESIGN"
     ],
 
-    image: "/brochure/b3.jpeg"
+    image: "/brochure/b3/b3.1.jpeg",
+
+    gallery: [
+      "/brochure/b3/b3.1.jpeg",
+    ]
   },
 
 
@@ -572,7 +584,11 @@ const projects: Project[] = [
       "LAYOUT"
     ],
 
-    image: "/brochure/b4.jpeg"
+    image: "/brochure/b4/b4.png",
+
+    gallery: [
+      "/brochure/b4/b4.1.jpeg",
+    ]
   },
 
 
@@ -597,7 +613,11 @@ const projects: Project[] = [
       "BUSINESS DESIGN"
     ],
 
-    image: "/brochure/b5.jpeg"
+    image: "/brochure/b5/b5.png",
+
+    gallery: [
+      "/brochure/b5/b5.1.jpeg",
+    ]
   },
 
 
@@ -622,7 +642,11 @@ const projects: Project[] = [
       "LAYOUT"
     ],
 
-    image: "/brochure/b6.jpeg"
+    image: "/brochure/b6/b6.png",
+
+    gallery: [
+      "/brochure/b6/b6.1.jpeg",
+    ]
   },
 
 
@@ -647,7 +671,11 @@ const projects: Project[] = [
       "VISUAL DESIGN"
     ],
 
-    image: "/brochure/b7.jpeg"
+    image: "/brochure/b7/b7.png",
+
+    gallery: [
+      "/brochure/b7/b7.1.jpeg",
+    ]
   },
 
 
@@ -676,7 +704,11 @@ const projects: Project[] = [
       "TECHNICAL LAYOUT"
     ],
 
-    image: "/brochure/b8.jpeg"
+    image: "/brochure/b8/b8.png",
+
+    gallery: [
+      "/brochure/b8/b8.1.jpeg",
+    ]
   },
 
 
@@ -705,7 +737,11 @@ const projects: Project[] = [
       "PRINT DESIGN"
     ],
 
-    image: "/brochure/b9.jpeg"
+    image: "/brochure/b9/b9.jpeg",
+
+    gallery: [
+      "/brochure/b9/b9.1.jpeg",
+    ]
   },
 
 
@@ -730,7 +766,11 @@ const projects: Project[] = [
       "PRINT DESIGN"
     ],
 
-    image: "/brochure/b10.jpg"
+    image: "/brochure/b10/b10.jpg",
+
+    gallery: [
+      "/brochure/b10/b10.1.jpg",
+    ]
   },
 
 
@@ -755,7 +795,11 @@ const projects: Project[] = [
       "PRODUCT DESIGN"
     ],
 
-    image: "/brochure/b11.jpeg"
+    image: "/brochure/b11/b11.jpeg",
+
+    gallery: [
+      "/brochure/b11/b11.1.jpeg",
+    ]
   },
 
 
@@ -780,7 +824,11 @@ const projects: Project[] = [
       "CORPORATE DESIGN"
     ],
 
-    image: "/brochure/b12.jpeg"
+    image: "/brochure/b12/b12.jpeg",
+
+    gallery: [
+      "/brochure/b12/b12.1.jpeg",
+    ]
   },
 
 
@@ -805,7 +853,11 @@ const projects: Project[] = [
       "BRANDING"
     ],
 
-    image: "/brochure/b13.jpg"
+    image: "/brochure/b13/b13.png",
+
+    gallery: [
+      "/brochure/b13/b13.1.jpeg",
+    ]
   },
 
 
@@ -1118,7 +1170,13 @@ const projects: Project[] = [
       "PRODUCT MOCKUP"
     ],
 
-    image: "/packaging/p1/p1.png"
+    image: "/packaging/p1/p1.png",
+
+    gallery: [
+      "/packaging/p1/p1.1.png"
+    ]
+
+
   },
 
 
@@ -1143,7 +1201,11 @@ const projects: Project[] = [
       "PRODUCT MOCKUP"
     ],
 
-    image: "/packaging/p2/p2.jpg"
+    image: "/packaging/p2/p2.png",
+
+    gallery: [
+      "/packaging/p1/p2.1.jpg"
+    ]
   },
 
 

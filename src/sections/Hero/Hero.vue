@@ -217,7 +217,7 @@ onBeforeUnmount(() => {
       <div class="hero-copy">
 
         <p class="hero-eyebrow">
-          HELLO, Welcome to the 
+          HELLO, WELCOME TO THE 
         </p>
 
         <h1 class="hero-title">

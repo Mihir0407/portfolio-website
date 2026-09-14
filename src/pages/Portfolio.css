@@ -387,26 +387,23 @@
 
 
 /* =====================================================
-   IMAGE
+   PORTFOLIO PROJECT IMAGE — FIXED & EVEN
 ===================================================== */
 
 .portfolio-image-wrap {
-
   position: relative;
 
   width: 100%;
 
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 15 / 9;
 
   overflow: hidden;
 
-  background: #ddd;
-
+  background: #e9e6df;
 }
 
 
 .portfolio-image {
-
   display: block;
 
   width: 100%;
@@ -415,27 +412,29 @@
 
   object-fit: cover;
 
+  object-position: center;
+
+  transform: scale(1);
+
   transition:
-    transform
-    0.7s
+    transform 0.7s
     cubic-bezier(
       0.2,
       0.7,
       0.2,
       1
     );
-
 }
 
+
+/* =====================================================
+   IMAGE HOVER
+===================================================== */
 
 .portfolio-card:hover
 .portfolio-image {
-
-  transform:
-    scale(1.045);
-
+  transform: scale(1.035);
 }
-
 
 /* =====================================================
    IMAGE OVERLAY
@@ -962,7 +961,7 @@
 
 }
 .portfolio-projects {
-  color: #21a366;
+  color: #F79F31;
 }
 /* =========================================================
    BEHANCE STYLE PROJECT VIEWER

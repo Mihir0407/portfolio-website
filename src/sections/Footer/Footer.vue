@@ -16,9 +16,9 @@
 
         <div class="section-label">
 
-          <span class="section-number">06</span>
+          <span class="section-number-cta">06</span>
 
-          <span class="section-line"></span>
+          <span class="section-line-cta"></span>
 
           <span>LET'S WORK TOGETHER</span>
 

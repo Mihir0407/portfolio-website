@@ -9,8 +9,8 @@
       <div class="contact-info">
 
         <div class="section-label">
-          <span class="section-number">05</span>
-          <span class="section-line"></span>
+          <span class="section-number-contact">05</span>
+          <span class="section-line-contact"></span>
           <span>CONTACT</span>
         </div>
 

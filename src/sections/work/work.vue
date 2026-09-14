@@ -37,8 +37,7 @@
         </span>
 
         <span class="work-label-line"></span>
-
-        <span>
+      <span>
           SELECTED WORK
         </span>
 
