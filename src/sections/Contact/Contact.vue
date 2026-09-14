@@ -36,7 +36,7 @@
             <span class="detail-label">EMAIL</span>
 
             <a href="mailto:hello@yourdomain.com">
-              hello@yourdomain.com
+              contact@karmdesignstudio.com
             </a>
           </div>
 

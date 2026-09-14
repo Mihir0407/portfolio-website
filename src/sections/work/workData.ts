@@ -584,7 +584,7 @@ const projects: Project[] = [
       "LAYOUT"
     ],
 
-    image: "/brochure/b4/b4.png",
+    image: "/brochure/b4/b4.1.jpeg",
 
     gallery: [
       "/brochure/b4/b4.1.jpeg",
@@ -613,7 +613,7 @@ const projects: Project[] = [
       "BUSINESS DESIGN"
     ],
 
-    image: "/brochure/b5/b5.png",
+    image: "/brochure/b5/b5.1.jpeg",
 
     gallery: [
       "/brochure/b5/b5.1.jpeg",
@@ -642,7 +642,7 @@ const projects: Project[] = [
       "LAYOUT"
     ],
 
-    image: "/brochure/b6/b6.png",
+    image: "/brochure/b6/b6.1.jpeg",
 
     gallery: [
       "/brochure/b6/b6.1.jpeg",
@@ -671,7 +671,7 @@ const projects: Project[] = [
       "VISUAL DESIGN"
     ],
 
-    image: "/brochure/b7/b7.png",
+    image: "/brochure/b7/b7.1.jpeg",
 
     gallery: [
       "/brochure/b7/b7.1.jpeg",
@@ -704,7 +704,7 @@ const projects: Project[] = [
       "TECHNICAL LAYOUT"
     ],
 
-    image: "/brochure/b8/b8.png",
+    image: "/brochure/b8/b8.1.jpeg",
 
     gallery: [
       "/brochure/b8/b8.1.jpeg",
@@ -737,7 +737,7 @@ const projects: Project[] = [
       "PRINT DESIGN"
     ],
 
-    image: "/brochure/b9/b9.jpeg",
+    image: "/brochure/b9/b9.1.jpeg",
 
     gallery: [
       "/brochure/b9/b9.1.jpeg",
@@ -766,7 +766,7 @@ const projects: Project[] = [
       "PRINT DESIGN"
     ],
 
-    image: "/brochure/b10/b10.jpg",
+    image: "/brochure/b10/b10.1.jpg",
 
     gallery: [
       "/brochure/b10/b10.1.jpg",
@@ -795,7 +795,7 @@ const projects: Project[] = [
       "PRODUCT DESIGN"
     ],
 
-    image: "/brochure/b11/b11.jpeg",
+    image: "/brochure/b11/b11.1.jpeg",
 
     gallery: [
       "/brochure/b11/b11.1.jpeg",
@@ -824,7 +824,7 @@ const projects: Project[] = [
       "CORPORATE DESIGN"
     ],
 
-    image: "/brochure/b12/b12.jpeg",
+    image: "/brochure/b12/b12.1.jpeg",
 
     gallery: [
       "/brochure/b12/b12.1.jpeg",
@@ -853,7 +853,7 @@ const projects: Project[] = [
       "BRANDING"
     ],
 
-    image: "/brochure/b13/b13.png",
+    image: "/brochure/b13/b13.1.jpeg",
 
     gallery: [
       "/brochure/b13/b13.1.jpeg",
