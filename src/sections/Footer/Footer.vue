@@ -42,10 +42,7 @@
           </div>
 
 
-          <a
-            href="#contact"
-            class="footer-talk-button"
-          >
+          <a href="#contact" class="footer-talk-button">
 
             <span>LET'S TALK</span>
 
@@ -69,22 +66,19 @@
 
         <div class="footer-brand">
 
-  <div class="footer-logo">
-    <img
-      src="/images/karm-logo.png"
-      alt="Karm Design Studio"
-    />
-  </div>
+          <div class="footer-logo">
+            <img src="/images/karm-logo.png" alt="Karm Design Studio" />
+          </div>
 
 
-    <p>
-      Creative design &amp;
-      digital experiences.
-    </p>
+          <p>
+            Creative design &amp;
+            digital experiences.
+          </p>
 
 
 
-</div>
+        </div>
 
 
         <!-- NAVIGATION -->
@@ -106,7 +100,7 @@
 
 
         <!-- CONTACT -->
- 
+
         <div class="footer-column">
 
           <span class="footer-column-title">
@@ -114,7 +108,11 @@
           </span>
 
           <a href="mailto:hello@yourdomain.com">
-            hello@yourdomain.com
+            contact@karmdesignstudio.com
+          </a>
+
+          <a href="tel:+919XXXXXXXXX">
+            +91 9909565916
           </a>
 
           <span>
@@ -126,58 +124,46 @@
 
         <!-- SOCIAL -->
 
-       <!-- SOCIAL -->
+        <!-- SOCIAL -->
 
-<div class="footer-column">
+        <div class="footer-column">
 
-  <span class="footer-column-title">
-    SOCIAL
-  </span>
+          <span class="footer-column-title">
+            SOCIAL
+          </span>
 
-  <a
-    href="#"
-    target="_blank"
-    rel="noopener"
-  >
-    LinkedIn ↗
-  </a>
+          <a href="#" target="_blank" rel="noopener">
+            LinkedIn ↗
+          </a>
 
-  <a
-    href="#"
-    target="_blank"
-    rel="noopener"
-  >
-    Instagram ↗
-  </a>
+          <a href="#" target="_blank" rel="noopener">
+            Instagram ↗
+          </a>
 
-  <a
-    href="https://www.behance.net/creativedesignerin"
-    target="_blank"
-    rel="noopener"
-  >
-    Behance ↗
-  </a>
+          <a href="https://www.behance.net/creativedesignerin" target="_blank" rel="noopener">
+            Behance ↗
+          </a>
 
-</div>
+        </div>
 
 
-<!-- LEGAL -->
+        <!-- LEGAL -->
 
-<div class="footer-column">
+        <div class="footer-column">
 
-  <span class="footer-column-title">
-    LEGAL
-  </span>
+          <span class="footer-column-title">
+            LEGAL
+          </span>
 
-  <a href="/privacy-policy">
-    Privacy Policy ↗
-  </a>
+          <a href="/privacy-policy">
+            Privacy Policy ↗
+          </a>
 
-  <a href="/terms">
-    Terms & Conditions ↗
-  </a>
+          <a href="/terms">
+            Terms & Conditions ↗
+          </a>
 
-</div>
+        </div>
 
       </div>
 
@@ -202,10 +188,7 @@
         </span>
 
 
-        <button
-          class="back-top"
-          @click="scrollToTop"
-        >
+        <button class="back-top" @click="scrollToTop">
 
           BACK TO TOP
 

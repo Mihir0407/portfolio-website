@@ -40,13 +40,13 @@
             </a>
           </div>
           <!-- PHONE -->
-  <div class="detail-item">
-    <span class="detail-label">PHONE</span>
+          <div class="detail-item">
+            <span class="detail-label">PHONE</span>
 
-    <a href="tel:+919XXXXXXXXX">
-      +91 9909565916
-    </a>
-  </div>
+            <a href="tel:+919XXXXXXXXX">
+              +91 9909565916
+            </a>
+          </div>
 
 
           <div class="detail-item">
@@ -76,12 +76,7 @@
 
             <label>01 / YOUR NAME</label>
 
-            <input
-              v-model="form.name"
-              type="text"
-              placeholder="Enter your name"
-              required
-            />
+            <input v-model="form.name" type="text" placeholder="Enter your name" required />
 
           </div>
 
@@ -91,12 +86,7 @@
 
             <label>02 / EMAIL ADDRESS</label>
 
-            <input
-              v-model="form.email"
-              type="email"
-              placeholder="you@example.com"
-              required
-            />
+            <input v-model="form.email" type="email" placeholder="you@example.com" required />
 
           </div>
 
@@ -106,15 +96,9 @@
 
             <label>03 / WHAT DO YOU NEED?</label>
 
-            <select
-              v-model="form.service"
-              required
-            >
+            <select v-model="form.service" required>
 
-              <option
-                value=""
-                disabled
-              >
+              <option value="" disabled>
                 Select a service
               </option>
 
@@ -152,22 +136,13 @@
 
             <label>04 / PROJECT DETAILS</label>
 
-            <textarea
-              v-model="form.message"
-              rows="5"
-              placeholder="Tell us about your project..."
-              required
-            ></textarea>
+            <textarea v-model="form.message" rows="5" placeholder="Tell us about your project..." required></textarea>
 
           </div>
 
 
           <!-- BUTTON -->
-          <button
-            type="submit"
-            class="submit-button"
-            :disabled="loading"
-          >
+          <button type="submit" class="submit-button" :disabled="loading">
 
             <span>
               {{ loading ? "SENDING..." : "SEND ENQUIRY" }}
@@ -181,19 +156,13 @@
 
 
           <!-- SUCCESS -->
-          <div
-            v-if="success"
-            class="form-message success"
-          >
+          <div v-if="success" class="form-message success">
             ✓ Thanks! We'll get back to you soon.
           </div>
 
 
           <!-- ERROR -->
-          <div
-            v-if="error"
-            class="form-message error"
-          >
+          <div v-if="error" class="form-message error">
             Something went wrong. Please try again.
           </div>
 
